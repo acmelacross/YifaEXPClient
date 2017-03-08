@@ -25,8 +25,8 @@
             android:background="@drawable/input_text_orange_border"
             android:focusableInTouchMode="true"
             android:gravity="top"
-            android:hint="请输入您的宝贵意见，我们将为您提供更优质的服务"
-            android:padding="5.0dip"
+            android:hint="请输入您的宝贵意见，易发智运将为您提供更优质的服务"
+            android:padding="8.0dip"
             android:textColor="@color/black" />
     </LinearLayout>
 

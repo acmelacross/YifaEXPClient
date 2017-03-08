@@ -6,6 +6,8 @@ import java.util.Date;
 
 import android.R.integer;
 
+import com.fwh.utils.Constants;
+
 import cn.bmob.v3.BmobObject;
 import cn.bmob.v3.datatype.BmobGeoPoint;
 
@@ -42,7 +44,7 @@ public class GoodsForYifa extends BmobObject{
 	private double price=0.0;//j价格
 	public static String  ExpHuoZSInfo = "";//整车散货
 	public static int  ExpHuoZSTtpe;//整车散货
-	private  int  ExpHuoPay = Constact.EXP_GoodPayStateDefault;//0 为默认  未选择 1货到付款 2 在线支付 
+	private  int  ExpHuoPay = Constants.EXP_GoodPayStateDefault;//0 为默认  未选择 1货到付款 2 在线支付
 	public int getExpHuoPay() {
 		return ExpHuoPay;
 	}
@@ -61,7 +63,7 @@ public class GoodsForYifa extends BmobObject{
 	public static void setExpHuoZSTtpe(int expHuoZSTtpe) {
 		ExpHuoZSTtpe = expHuoZSTtpe;
 	}
-	private int priceStaet= Constact.EXP_GoodPayStateDefault;//订单状态 0未付款  1已付款
+	private int priceStaet= Constants.EXP_GoodPayStateDefault;//订单状态 0未付款  1已付款
 	public int getPriceStaet() {
 		return priceStaet;
 	}

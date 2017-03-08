@@ -4,9 +4,9 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import com.fwh.commons.time.SlideDateTimeListener;
 import com.fwh.commons.time.SlideDateTimePicker;
+import com.fwh.utils.Constants;
 import com.fwh.utils.ToastUtil;
 import com.fwh.yifaexp.R;
-import com.fwh.yifaexp.model.Constact;
 
 import android.graphics.Color;
 import android.media.AudioManager;
@@ -81,8 +81,8 @@ public class HuoInfoActivity extends FragmentActivity implements OnClickListener
 		rlXianShiDa1= (RelativeLayout)findViewById(R.id.rlXianShiDa1);
 		tvHuoInfoWuLiuChe		= (EditText)findViewById(R.id.tvHuoInfoWuLiuChe);
 
-	System.out.println(Config.getInstance().ExpWay+"Config.getInstance().ExpWay" +Constact.EXP_WAY_BY_TONGCHENG);
-		if (Config.getInstance().ExpWay ==Constact.EXP_WAY_BY_TONGCHENG ) {//同城 不 显示 物流车 和物流公司
+	System.out.println(Config.getInstance().ExpWay+"Config.getInstance().ExpWay" + Constants.EXP_WAY_BY_TONGCHENG);
+		if (Config.getInstance().ExpWay ==Constants.EXP_WAY_BY_TONGCHENG ) {//同城 不 显示 物流车 和物流公司
 			rlHuoInfoaWuLiuChe.setVisibility(View.GONE);
 			rlHuoInfoWuLiuGongSi.setVisibility(View.GONE);
 		}else{//显示 物流车 和物流公司 同城以外
@@ -430,11 +430,11 @@ public class HuoInfoActivity extends FragmentActivity implements OnClickListener
 		dialogCheLeiXing.dismiss();
 		break;
 		case R.id.tv_huo_info_sanhuo:
-			Config.getInstance().ExpHuoZSInfo=Constact.EXP_GoodZSSanStr;tvHuoInfoZhuanSanXuanze.setText(Config.getInstance().ExpHuoZSInfo);
+			Config.getInstance().ExpHuoZSInfo=Constants.EXP_GoodZSSanStr;tvHuoInfoZhuanSanXuanze.setText(Config.getInstance().ExpHuoZSInfo);
 			dialogZhengSan.dismiss();
 			break;
 		case R.id.tv_huo_info_zhengche:
-				Config.getInstance().ExpHuoZSInfo=Constact.EXP_GoodZSZhengStr;
+				Config.getInstance().ExpHuoZSInfo=Constants.EXP_GoodZSZhengStr;
 				tvHuoInfoZhuanSanXuanze.setText(Config.getInstance().ExpHuoZSInfo);
 				dialogZhengSan.dismiss();
 			break;
@@ -513,8 +513,8 @@ public class HuoInfoActivity extends FragmentActivity implements OnClickListener
 		// TODO Auto-generated method stub
 		switch (way) {
 		case IndexActivity.SELECT_EXP_WAY_KUAIDI://快递
-			Config.getInstance().ExpWay = Constact.EXP_WAY_BY_KUAIDI;
-			Config.getInstance().ExpWayStr = Constact.EXP_WAY_STR_KUAIDI;
+			Config.getInstance().ExpWay = Constants.EXP_WAY_BY_KUAIDI;
+			Config.getInstance().ExpWayStr = Constants.EXP_WAY_STR_KUAIDI;
 			//expWay = IndexActivity.SELECT_EXP_WAY_KUAIDI;
 			ivMapIndexKuaidi.setBackgroundResource(R.drawable.ic_kuaidi);
 			ivMapIndexTongCheng.setBackgroundResource(R.drawable.ic_kwt);
@@ -523,8 +523,8 @@ public class HuoInfoActivity extends FragmentActivity implements OnClickListener
 			
 			break;
 		case IndexActivity.SELECT_EXP_WAY_TONGCHENG://同城
-			Config.getInstance().ExpWay = Constact.EXP_WAY_BY_TONGCHENG;
-			Config.getInstance().ExpWayStr = Constact.EXP_WAY_STR_TONGCHENG;
+			Config.getInstance().ExpWay = Constants.EXP_WAY_BY_TONGCHENG;
+			Config.getInstance().ExpWayStr = Constants.EXP_WAY_STR_TONGCHENG;
 			
 			//expWay = IndexActivity.SELECT_EXP_WAY_TONGCHENG;
 			ivMapIndexKuaidi.setBackgroundResource(R.drawable.ic_kwt);
@@ -534,8 +534,8 @@ public class HuoInfoActivity extends FragmentActivity implements OnClickListener
 			setRLVisible(true);
 			break;
 		case IndexActivity.SELECT_EXP_WAY_WULIU:
-			Config.getInstance().ExpWay = Constact.EXP_WAY_BY_WULIU;
-			Config.getInstance().ExpWayStr = Constact.EXP_WAY_STR_WULIU;
+			Config.getInstance().ExpWay = Constants.EXP_WAY_BY_WULIU;
+			Config.getInstance().ExpWayStr = Constants.EXP_WAY_STR_WULIU;
 			//expWay = IndexActivity.SELECT_EXP_WAY_WULIU;//物流
 			ivMapIndexKuaidi.setBackgroundResource(R.drawable.ic_kwt);
 			ivMapIndexTongCheng.setBackgroundResource(R.drawable.ic_kwt);

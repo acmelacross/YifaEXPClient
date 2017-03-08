@@ -259,7 +259,6 @@
          android:id="@+id/tvHuoInfoWuLiuChe"
          android:layout_width="wrap_content"
          android:layout_height="wrap_content"
-         android:layout_alignBottom="@+id/tvHuoInfoWuLiuChe"
          android:layout_centerInParent="true"
          android:hint="请输入物流车信息"
          android:textColor="@color/black"

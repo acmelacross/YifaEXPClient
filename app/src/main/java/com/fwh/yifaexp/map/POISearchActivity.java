@@ -13,9 +13,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.KeyEvent;
-import android.view.Menu;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
@@ -34,14 +32,12 @@ import com.amap.api.services.help.Tip;
 import com.amap.api.services.poisearch.PoiResult;
 import com.amap.api.services.poisearch.PoiSearch;
 import com.amap.api.services.poisearch.PoiSearch.OnPoiSearchListener;
-import com.fwh.commons.CustomerSpinner;
+import com.fwh.utils.Constants;
 import com.fwh.utils.ToastUtil;
 import com.fwh.yifaexp.R;
 import com.fwh.yifaexp.map.adapter.PoiSearchContentAdapter;
-import com.fwh.yifaexp.model.Constact;
 import com.iflytek.cloud.ErrorCode;
 import com.iflytek.cloud.InitListener;
-import com.iflytek.cloud.RecognizerListener;
 import com.iflytek.cloud.RecognizerResult;
 import com.iflytek.cloud.SpeechConstant;
 import com.iflytek.cloud.SpeechError;
@@ -99,7 +95,7 @@ public class POISearchActivity extends Activity implements TextWatcher,
 			@Override
 			public void onItemClick(AdapterView<?> arg0, View arg1,
 					int position, long arg3) {
-				String[] temp = listString.get(position).split(";");
+				String[] temp = adapter.getList().get(position).split(";");
 				keyWord = temp[0];
 				doSearchQuery();
 			}
@@ -152,7 +148,7 @@ public class POISearchActivity extends Activity implements TextWatcher,
 	protected void doSearchQuery() {
 		currentPage = 0;
 		query = new PoiSearch.Query(keyWord, "", "");// 第一个参数表示搜索字符串，第二个参数表示poi搜索类型，第三个参数表示poi搜索区域（空字符串代表全国）
-		query.setPageSize(15);// 设置每页最多返回多少条poiitem
+		query.setPageSize(30);// 设置每页最多返回多少条poiitem
 		query.setPageNum(currentPage);// 设置查第一页
 		poiSearch = new PoiSearch(this, query);
 		poiSearch.setOnPoiSearchListener(this);
@@ -182,7 +178,8 @@ public class POISearchActivity extends Activity implements TextWatcher,
 				new InputtipsListener() {
 					@Override
 					public void onGetInputtips(List<Tip> tipList, int rCode) {
-						if (rCode == 0) {// 正确返回
+						System.out.println(tipList.size()+"rCode    "  +rCode);
+						if (rCode == 1000) {// 正确返回
 							listString = new ArrayList<String>();
 							for (int i = 0; i < tipList.size(); i++) {
 
@@ -216,7 +213,7 @@ public class POISearchActivity extends Activity implements TextWatcher,
 	@Override
 	public void onPoiSearched(PoiResult result, int rCode) {
 		// TODO Auto-generated method stub
-		if (rCode == 0) {
+		if (rCode == 1000) {
 			if (result != null && result.getQuery() != null) {// 搜索poi的结果
 				if (result.getQuery().equals(query)) {// 是否是同一条
 					// poiResult = result;
@@ -261,15 +258,15 @@ public class POISearchActivity extends Activity implements TextWatcher,
 						//System.out.println("----0 " +Config.getInstance().currentCity);
 						if (Config.getInstance().currentCity.equals(result.getPois().get(0).getCityName())) {// 判断是否同城物流
 																	// 当前同城
-							Config.getInstance().ExpWay = Constact.EXP_WAY_BY_TONGCHENG;
-							Config.getInstance().ExpWayStr = Constact.EXP_WAY_STR_TONGCHENG;
+							Config.getInstance().ExpWay = Constants.EXP_WAY_BY_TONGCHENG;
+							Config.getInstance().ExpWayStr = Constants.EXP_WAY_STR_TONGCHENG;
 							System.out.println("tongcheng   "
 									+ Config.getInstance().gpsAddStartStr
 									+ "---"
 									+ result.getPois().get(0).getCityName());
 						} else {
-							Config.getInstance().ExpWay = Constact.EXP_WAY_BY_WULIU;
-							Config.getInstance().ExpWayStr = Constact.EXP_WAY_STR_WULIU;
+							Config.getInstance().ExpWay = Constants.EXP_WAY_BY_WULIU;
+							Config.getInstance().ExpWayStr = Constants.EXP_WAY_STR_WULIU;
 							System.out.println("wuliu   "
 									+ Config.getInstance().gpsAddStartStr
 									+ "---"

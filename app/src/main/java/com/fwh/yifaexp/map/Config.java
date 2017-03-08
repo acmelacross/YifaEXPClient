@@ -2,7 +2,7 @@ package com.fwh.yifaexp.map;
 
 import cn.bmob.v3.datatype.BmobGeoPoint;
 
-import com.fwh.yifaexp.model.Constact;
+import com.fwh.utils.Constants;
 import com.fwh.yifaexp.model.UserForYifa;
 
 public class Config {
@@ -20,7 +20,7 @@ public class Config {
         }  
         return instance;  
     }  
-	public  int ExpWay = Constact.EXP_WAY_BY_TONGCHENG;//发货方式
+	public  int ExpWay = Constants.EXP_WAY_BY_TONGCHENG;//发货方式
 	public  String currentCity = "潍坊市";//发货方式
 	public  String ExpWayStr = "同城";//发货方式
 	public  String ExpHuoType = "";//货物类型

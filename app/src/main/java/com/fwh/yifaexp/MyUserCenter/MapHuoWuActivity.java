@@ -27,11 +27,11 @@ import com.amap.api.maps.model.CameraPosition;
 import com.amap.api.maps.model.LatLng;
 import com.amap.api.maps.model.Marker;
 import com.amap.api.maps.model.MarkerOptions;
+import com.fwh.utils.Constants;
 import com.fwh.utils.FailedlWrite;
 import com.fwh.utils.MyMapUtil;
 import com.fwh.utils.ToastUtil;
 import com.fwh.yifaexp.R;
-import com.fwh.yifaexp.model.Constact;
 import com.fwh.yifaexp.model.GoodsForYifa;
 
 public class MapHuoWuActivity extends Activity {
@@ -67,6 +67,8 @@ public class MapHuoWuActivity extends Activity {
 //	}
 
 	private void initView() {
+		good = MyJourneyActivity.goodTemp;
+		//System.out.println("good   " +good);
 		// TODO Auto-generated method stub
 		((TextView) findViewById(R.id.title)).setText("货去哪儿了");
 		((TextView)findViewById(R.id.tvMapPositionCheNums)).setText(good.getUserDriver().getCarNum());
@@ -78,12 +80,12 @@ public class MapHuoWuActivity extends Activity {
 		//货物状态为已付款 则取消显示
 		ll_mapHuoPayWay = (LinearLayout)findViewById(R.id.ll_mapHuoPayWay);
 		System.out.println("good.getExpHuoPay()  " +good.getExpHuoPay());
-		if (good.getExpHuoPay() == Constact.EXP_GoodPayStateDefault) 
+		if (good.getExpHuoPay() == Constants.EXP_GoodPayStateDefault)
 			tvIsPay.setText("货到付款");
 			//ll_mapHuoPayWay.setVisibility(View.GONE);
-		else if (good.getExpHuoPay() ==Constact.EXP_GoodPayStateDestination) //1货到付款 2 在线支付
+		else if (good.getExpHuoPay() ==Constants.EXP_GoodPayStateDestination) //1货到付款 2 在线支付
 			tvIsPay.setText("货到付款");
-		else if (good.getExpHuoPay() ==Constact.EXP_GoodPayStateInt) //1货到付款 2 在线支付
+		else if (good.getExpHuoPay() ==Constants.EXP_GoodPayStateInt) //1货到付款 2 在线支付
 			tvIsPay.setText("在线支付");
 			
 		// 返回按钮
@@ -110,11 +112,11 @@ public class MapHuoWuActivity extends Activity {
 				new View.OnClickListener() {
 					@Override
 					public void onClick(View arg0) {
-						updatePayState(Constact.EXP_GoodPayStateDestination);
+						updatePayState(Constants.EXP_GoodPayStateDestination);
 						
 					}
 				});
-		if (good.getPriceStaet() !=Constact.EXP_GoodPayStateDefault) {
+		if (good.getPriceStaet() !=Constants.EXP_GoodPayStateDefault) {
 			tv_mapHuoPay.setVisibility(View.GONE);
 		}
 		// 初始化 取消订单
@@ -129,7 +131,7 @@ public class MapHuoWuActivity extends Activity {
 							public void onClick(View arg0) {
 								//pay();//good
 								//pay();//good
-								if(good.getiGoodState() != Constact.EXP_GoodStateCancel){
+								if(good.getiGoodState() != Constants.EXP_GoodStateCancel){
 									new AlertDialog.Builder(MapHuoWuActivity.this).setTitle("确认取消订单吗？") 
 									.setMessage("恶意刷单将会被处罚哦")
 						            .setIcon(android.R.drawable.ic_dialog_info) 
@@ -138,12 +140,12 @@ public class MapHuoWuActivity extends Activity {
 						                public void onClick(DialogInterface dialog, int which) { 
 						                // 点击“确认”后的操作 
 						                	GoodsForYifa temp = new GoodsForYifa();
-											temp.setiGoodState(Constact.EXP_GoodStateCancel);
+											temp.setiGoodState(Constants.EXP_GoodStateCancel);
 											temp.update(MapHuoWuActivity.this, good.getObjectId(), new UpdateListener() {
 											    @Override
 											    public void onSuccess() {
 											        // TODO Auto-generated method stub
-											    	good.setiGoodState(Constact.EXP_GoodStateCancel);
+											    	good.setiGoodState(Constants.EXP_GoodStateCancel);
 											    	ToastUtil.show(MapHuoWuActivity.this, "订单取消成功");
 											    	tv_mapHuoCancel.setBackgroundColor(Color.parseColor("#ffd0d0d0"));
 											    }
@@ -180,6 +182,7 @@ public class MapHuoWuActivity extends Activity {
 	}
 
 	private void initMap() {
+		//System.out.println("good2   " +good);
 		if (aMap == null) {
 			aMap = mapView.getMap();
 			setUpMap();
@@ -201,7 +204,7 @@ public class MapHuoWuActivity extends Activity {
 	private void printPointWithMap() {
 		// MyMapUtil.drawMarkerAndWinWithLon(aMap, 30.679879, 104.064855,
 		// "主人,我到这里啦", "外星地点", false).showInfoWindow();
-		//System.out.println(good.getUserDriver().getGpsAdd() + "----------");
+		//System.out.println( good+ "----------");
 		double lat = good.getUserDriver().getGpsAdd().getLatitude();
 		double lng = good.getUserDriver().getGpsAdd().getLongitude();
 		Marker mar = aMap.addMarker(new MarkerOptions()

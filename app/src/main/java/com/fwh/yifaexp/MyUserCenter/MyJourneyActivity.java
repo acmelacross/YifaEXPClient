@@ -15,11 +15,11 @@ import cn.bmob.v3.BmobQuery;
 import cn.bmob.v3.BmobUser;
 import cn.bmob.v3.listener.FindListener;
 
+import com.fwh.utils.Constants;
 import com.fwh.utils.FailedlWrite;
 import com.fwh.utils.ToastUtil;
 import com.fwh.yifaexp.R;
 import com.fwh.yifaexp.map.adapter.MyJourneyAdapter;
-import com.fwh.yifaexp.model.Constact;
 import com.fwh.yifaexp.model.GoodsForYifa;
 import com.fwh.yifaexp.model.UserForYifa;
 
@@ -47,9 +47,9 @@ private void initView() {
 		@Override
 		public void onItemClick(AdapterView<?> arg0, View arg1, int position,
 				long arg3) {
-			if (list.get(position).getiGoodState() != Constact.EXP_GoodStateCancel){
+			if (list.get(position).getiGoodState() != Constants.EXP_GoodStateCancel){
 				goodTemp = list.get(position);
-				//System.out.println(goodTemp.getObjectId()+"*-*-*-*-");
+				System.out.println(goodTemp.getObjectId()+"*-*-*-*-");
 				startActivity(new Intent().setClass(getApplicationContext(), MapHuoWuActivity.class));
 			}else
 				ToastUtil.show(getApplicationContext(), "改单已取消,不能查看详细内容");

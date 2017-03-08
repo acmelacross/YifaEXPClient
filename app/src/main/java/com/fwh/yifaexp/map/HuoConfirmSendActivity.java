@@ -3,7 +3,6 @@ package com.fwh.yifaexp.map;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.InputStream;
-import java.util.Date;
 import java.util.List;
 
 import cn.bmob.v3.BmobQuery;
@@ -19,13 +18,13 @@ import com.amap.api.maps.model.CameraPosition;
 import com.amap.api.maps.model.LatLng;
 import com.amap.api.maps.model.Marker;
 import com.amap.api.maps.model.MarkerOptions;
+import com.fwh.utils.Constants;
 import com.fwh.utils.FailedlWrite;
 import com.fwh.utils.MyMapUtil;
 import com.fwh.utils.ToastUtil;
 import com.fwh.yifaexp.R;
 import com.fwh.yifaexp.MyUserCenter.MapHuoWuActivity;
 import com.fwh.yifaexp.MyUserCenter.MyJourneyActivity;
-import com.fwh.yifaexp.model.Constact;
 import com.fwh.yifaexp.model.GoodsForYifa;
 import com.fwh.yifaexp.model.UserForYifa;
 import android.app.Activity;
@@ -214,10 +213,10 @@ public class HuoConfirmSendActivity extends Activity {
 		good.setGpsAddStart(Config.getInstance().gpsAddStart);
 		good.setGpsAddFinishStr(Config.getInstance().gpsAddFinishStr);
 		good.setGpsAddStartStr(Config.getInstance().gpsAddStartStr);
-		good.setiGoodState(Constact.EXP_GoodState_Jie);
-		good.setPriceStaet(Constact.EXP_GoodPayStateDefault);
+		good.setiGoodState(Constants.EXP_GoodState_Jie);
+		good.setPriceStaet(Constants.EXP_GoodPayStateDefault);
 		good.setXianShiDa(Config.getInstance().XianShiDa);
-		if (Config.getInstance().ExpWay !=Constact.EXP_WAY_BY_KUAIDI) {
+		if (Config.getInstance().ExpWay !=Constants.EXP_WAY_BY_KUAIDI) {
 			good.setdExpHuoWeight(Config.getInstance().ExpHuoWeight);
 			good.setsExpCheType(Config.getInstance().ExpCheType);
 			good.setsExpHuoInfoType(Config.getInstance().ExpHuoInfoType);

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="130dp"
+    android:layout_height="110dp"
     android:paddingLeft="10dp"
  android:background="@color/white"
-android:padding="10dp"
+
 android:orientation="vertical"
  >
 <RelativeLayout
@@ -61,7 +61,7 @@ android:orientation="vertical"
     android:id="@+id/tvMyJourneyStartPlace"
     android:layout_width="wrap_content"
     android:layout_height="35dp"
-    android:text="数据努力加载中..."
+    android:text="数据努力加载中............."
     android:textColor="@color/black"
    android:layout_toRightOf="@id/tmpImageStart"
      android:layout_centerVertical="true"

@@ -204,10 +204,12 @@ public class IndexActivity extends CheckPermissionsActivity implements LocationS
 		aMap.setLocationSource(this);// 设置定位监听
 		aMap.setOnMarkerClickListener(this);// 设置点击marker事件监听器
 		aMap.setOnInfoWindowClickListener(this);// 设置点击marker事件监听器
+		aMap.setMyLocationEnabled(true);// 设置为true表示显示定位层并可触发定位，false表示隐藏定位层并不可触发定位，默认是false
 		aMap.getUiSettings().setMyLocationButtonEnabled(true);// 设置默认定位按钮是否显示
 		aMap.setInfoWindowAdapter(this);// 设置自定义InfoWindow样式
-		aMap.setMyLocationEnabled(true);// 设置为true表示显示定位层并可触发定位，false表示隐藏定位层并不可触发定位，默认是false
-		aMap.moveCamera(CameraUpdateFactory.zoomTo(15));
+
+		//aMap.moveCamera(CameraUpdateFactory.zoomTo(15));
+
 		// aMap.setMyLocationType()
 
 	}
@@ -349,6 +351,8 @@ public class IndexActivity extends CheckPermissionsActivity implements LocationS
 								public void onFailure(int code, String msg) {
 									// TODO Auto-generated method stub
 									// toast("更新用户信息失败:" + msg);
+									System.out.println("上传地理位置失败"
+											+ code + msg);
 									FailedlWrite
 											.writeCrashInfoToFile("上传地理位置失败"
 													+ code + msg);
@@ -648,9 +652,9 @@ public class IndexActivity extends CheckPermissionsActivity implements LocationS
 	@Override
 	public void onInfoWindowClick(Marker marker) {
 
-//		POISearchActivity.isStart = true;
-//		startActivityForResult((new Intent().setClass(getApplicationContext(),
-//				POISearchActivity.class)), SELECT_ADDRESS_WITH_MAP);
+		POISearchActivity.isStart = true;
+		startActivityForResult((new Intent().setClass(getApplicationContext(),
+				POISearchActivity.class)), SELECT_ADDRESS_WITH_MAP);
 		
 	}
 

@@ -4,234 +4,249 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     >
-          <include 
-            android:id="@+id/menu"
-            layout="@layout/view_title"/>
-          
-      
-          <RelativeLayout
-               android:id="@+id/rlIsPay"
-                    android:layout_width="match_parent"
-                  android:layout_height="100dp"
-                     android:layout_centerVertical="true"
-                        android:layout_below="@id/menu"
-               >
-              <ImageView 
-                  android:id="@+id/ivTempHead"
-                  android:layout_width="75dp"
-                  android:layout_height="75dp"
-                  android:background="@drawable/pinyou_icn_head"
-                  android:layout_margin="10dp"
-                  />
-           
-                <TextView 
-               android:id="@+id/tvIsPay"
-                    android:layout_width="100dp"
-                  android:layout_height="25dp"
-                     android:textColor="@color/orange_main"
-                     android:textSize="19.5sp"
-                     android:text=""
-                       android:background="@color/white"
-                       android:layout_alignParentBottom="true"
-                       android:layout_centerHorizontal="true"
-                       
-                  />
-                  <ImageView 
-                  android:id="@+id/ivMapPositionCall"
-                  android:layout_width="55dp"
-                  android:layout_height="55dp"
-                  android:background="@drawable/bts_general_phone_p"
-                  android:layout_margin="10dp"
-                  android:layout_centerVertical="true"
-                  android:layout_alignParentRight="true"
-                  />
-                     <TextView 
-                         android:id="@+id/tvMapPositionCheNums"
-                    android:layout_width="130dp"
-                  android:layout_height="30dp"
-                     android:textColor="@color/black_font"
-                     android:textSize="18.5sp"
-                     android:text="正在加载中..."
-                     android:layout_marginTop="40dp"
-                        android:layout_marginLeft="110dp"
-                       android:background="@color/white"
-                    
-                  />
-               
-          </RelativeLayout>
-              <LinearLayout
-              android:id="@+id/rlInfo"
-              android:layout_width="match_parent"
-              android:layout_height="100dp"
-               android:layout_below="@id/rlIsPay"
-               android:orientation="vertical"
-               android:gravity="center"
-                 android:padding="0dp"
-               android:layout_marginTop="10dp"
-               >
+    <include
+        android:id="@+id/menu"
+        layout="@layout/view_title"/>
 
-              <RelativeLayout
-                  android:layout_width="match_parent"
-                  android:layout_height="100dp"
-                
-                  android:background="@color/white" >
 
-                  <TextView
-                      android:id="@+id/tvMapHuoStart"
-                      android:layout_width="wrap_content"
-                      android:layout_height="45dp"
-                      android:layout_alignParentLeft="true"
-                      android:layout_alignParentTop="true"
-                      android:layout_marginLeft="30dp"
-                      android:drawableLeft="@drawable/common_icn_startpoint"
-                      android:drawablePadding="15dp"
-                      android:gravity="center_vertical"
-                      android:text="地址1" />
+    <RelativeLayout
+        android:id="@+id/rlIsPay"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_centerVertical="true"
+        android:layout_below="@id/menu"
+        >
+        <ImageView
+            android:id="@+id/ivTempHead"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:background="@drawable/pinyou_icn_head"
+            android:layout_margin="10dp"
+            />
 
-                  <TextView
-                        android:id="@+id/tvMapHuoEnd"
-                      android:layout_width="wrap_content"
-                      android:layout_height="45dp"
-                      android:layout_alignParentBottom="true"
-                      android:layout_alignParentLeft="true"
-                      android:layout_marginLeft="30dp"
-                      android:layout_marginTop="20dp"
-                      android:drawableLeft="@drawable/common_icn_endpoint"
-                      android:drawablePadding="15dp"
-                      android:gravity="center_vertical"
-                      android:text="地址2" />
+        <TextView
+            android:id="@+id/tvIsPay"
+            android:layout_width="100dp"
+            android:layout_height="25dp"
+            android:textColor="@color/orange_main"
+            android:textSize="19.5sp"
+            android:text=""
+            android:background="@color/white"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
 
-                  <TextView
-                      android:id="@+id/tvTemp"
-                      android:layout_width="wrap_content"
-                      android:layout_height="wrap_content"
-                      android:layout_alignParentRight="true"
-                      android:layout_centerVertical="true"
-                      android:layout_margin="10dp"
-                      android:background="@drawable/ic_title_back_right"
-                      android:gravity="center_vertical"
-                      android:textColor="@color/orange_main" />
+            />
+        <ImageView
+            android:id="@+id/ivMapPositionCall"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:background="@drawable/bts_general_phone_p"
+            android:layout_margin="10dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            />
+        <TextView
+            android:id="@+id/tvMapPositionCheNums"
+            android:layout_width="130dp"
+            android:layout_height="30dp"
+            android:textColor="@color/black_font"
+            android:textSize="18.5sp"
+            android:text="正在加载中..."
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="110dp"
+            android:background="@color/white"
 
-                  <TextView
-                      android:id="@+id/textView1"
-                      android:layout_width="wrap_content"
-                      android:layout_height="45dp"
-                      android:layout_centerVertical="true"
-                      android:layout_toLeftOf="@id/tvTemp"
-                      android:gravity="center_vertical"
-                      android:text=""
-                      android:textColor="@color/orange_main"
-                      android:textSize="20dp" />
+            />
 
-                  <TextView
-                      android:layout_width="wrap_content"
-                      android:layout_height="45dp"
-                      android:layout_alignBaseline="@+id/textView1"
-                      android:layout_alignBottom="@+id/textView1"
-                      android:layout_marginRight="5dp"
-                      android:layout_toLeftOf="@+id/textView1"
-                      android:gravity="center_vertical"
-                      android:text=""
-                      android:textColor="@color/gray_font"
-                      android:textSize="18.5dp" />
-                  
-                  <View 
-                      android:layout_height="1px"
-                      android:layout_width="match_parent"
-                      android:layout_marginLeft="30dp"
-                      android:layout_marginRight="150dp"
-                      android:layout_centerVertical="true"
-                      android:background="@color/gray_holo_light"
-                      />
-                    <View 
-                      android:layout_height="1px"
-                      android:layout_width="match_parent"
-                      android:layout_marginLeft="0dp"
-                      android:layout_marginRight="0dp"
-                      android:background="@color/gray_holo_light"
-                      />
-                      <View 
-                      android:layout_height="1px"
-                      android:layout_width="match_parent"
-                      android:layout_marginLeft="0dp"
-                      android:layout_marginRight="0dp"
-                      android:layout_alignParentBottom="true"
-                      android:background="@color/gray_holo_light"
-                      />
-              </RelativeLayout>
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/rlInfo"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@id/rlIsPay"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="0dp"
+        android:layout_marginTop="10dp"
+        >
 
-               <TextView 
-                   android:id="@+id/tvMapHuoWhereInfo"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:text="XX货运公司,车牌号鲁F8888,显示货物详情"
-              android:gravity="center"
-              android:textColor="@color/orange_main"
-              android:textSize="18.5sp"
-              android:layout_marginLeft="10dp"
-              android:layout_marginRight="10dp"
-              android:visibility="gone"
-                   />
-                    <TextView 
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:text="平均时速30Km/h"
-              android:gravity="center_horizontal"
-              android:textColor="@color/orange_main"
-              android:visibility="gone"
-                   />
-          </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+
+            android:background="@color/white" >
+
+            <TextView
+                android:id="@+id/tvMapHuoStart"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="30dp"
+                android:drawablePadding="15dp"
+                android:gravity="center_vertical"
+                android:textSize="7pt"
+                android:text="地址1" />
+
+            <TextView
+                android:id="@+id/tvMapHuoEnd"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:drawablePadding="15dp"
+                android:gravity="center_vertical"
+                android:textSize="7pt"
+                android:text="地址2" />
+
+            <TextView
+                android:id="@+id/tvTemp"
+                android:layout_width="18dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="10dp"
+                android:background="@drawable/icn_arrow_right"
+                android:gravity="center_vertical"
+                android:textColor="@color/orange_main" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/tvTemp"
+                android:gravity="center_vertical"
+                android:text=""
+                android:textColor="@color/orange_main"
+                android:textSize="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_alignBaseline="@+id/textView1"
+                android:layout_alignBottom="@+id/textView1"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/textView1"
+                android:gravity="center_vertical"
+                android:text=""
+                android:textColor="@color/gray_font"
+                android:textSize="18.5dp" />
+
+            <View
+                android:layout_height="1px"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="150dp"
+                android:layout_centerVertical="true"
+                android:background="@color/gray_holo_light"
+                />
+            <View
+                android:layout_height="1px"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                android:background="@color/gray_holo_light"
+                />
+            <View
+                android:layout_height="1px"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/gray_holo_light"
+                />
+            <ImageView
+                android:layout_width="13.68dp"
+                android:layout_height="18dp"
+                android:background="@drawable/common_icn_startpoint"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="14dp"
+                />
+            <ImageView
+                android:layout_width="13.68dp"
+                android:layout_height="18dp"
+                android:background="@drawable/common_icn_endpoint"
+                android:layout_marginLeft="15dp"
+                android:layout_marginBottom="14dp"
+                android:layout_alignParentBottom="true"
+                />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvMapHuoWhereInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="XX货运公司,车牌号鲁F8888,显示货物详情"
+            android:gravity="center"
+            android:textColor="@color/orange_main"
+            android:textSize="18.5sp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:visibility="gone"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="平均时速30Km/h"
+            android:gravity="center_horizontal"
+            android:textColor="@color/orange_main"
+            android:visibility="gone"
+            />
+    </LinearLayout>
     <com.amap.api.maps.MapView
         android:id="@+id/map"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" 
-         android:layout_below="@id/rlInfo"
-         android:layout_marginBottom="70dp"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rlInfo"
+        android:layout_marginBottom="70dp"
         />
 
-   <LinearLayout 
-       android:id="@+id/ll_mapHuoPayWay"
+    <LinearLayout
+        android:id="@+id/ll_mapHuoPayWay"
         android:layout_width="match_parent"
-    android:layout_height="50dp"
-    android:layout_alignParentBottom="true"
-      android:layout_margin="10dp"
-      android:orientation="horizontal"
-       >
-       <TextView 
-    android:id="@+id/tv_mapHuoPayInternet"
-    android:layout_width="wrap_content"
-    android:layout_height="match_parent"
-    android:background="@color/orange_main"
-    android:textColor="@color/white"
-    android:text="在线付款"
-    android:gravity="center"
-    android:textSize="19.5sp"
-    android:layout_weight="0.333"
-    android:layout_marginRight="10dp"
-    />
-<TextView 
-    android:id="@+id/tv_mapHuoPayDao"
-    android:layout_width="wrap_content"
-    android:layout_height="match_parent"
-    android:background="@color/orange_main"
-    android:textColor="@color/white"
-    android:text="货到付款"
-    android:gravity="center"
-    android:textSize="19.5sp"
-    android:layout_weight="0.333"
-     android:layout_marginRight="10dp"
-    />
-       <TextView 
-    android:id="@+id/tv_mapHuoCancel"
-    android:layout_width="wrap_content"
-    android:layout_height="match_parent"
-    android:background="@color/orange_main"
-    android:textColor="@color/white"
-    android:text="取消订单"
-    android:gravity="center"
-    android:textSize="19.5sp"
-    android:layout_weight="0.333"
-    />
-   </LinearLayout>
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:id="@+id/tv_mapHuoPayInternet"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/orange_main"
+            android:textColor="@color/white"
+            android:text="在线付款"
+            android:gravity="center"
+            android:textSize="19.5sp"
+            android:layout_weight="0.333"
+            android:layout_marginRight="10dp"
+            />
+        <TextView
+            android:id="@+id/tv_mapHuoPayDao"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/orange_main"
+            android:textColor="@color/white"
+            android:text="货到付款"
+            android:gravity="center"
+            android:textSize="19.5sp"
+            android:layout_weight="0.333"
+            android:layout_marginRight="10dp"
+            />
+        <TextView
+            android:id="@+id/tv_mapHuoCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/orange_main"
+            android:textColor="@color/white"
+            android:text="取消订单"
+            android:gravity="center"
+            android:textSize="19.5sp"
+            android:layout_weight="0.333"
+            />
+    </LinearLayout>
 
 </RelativeLayout>

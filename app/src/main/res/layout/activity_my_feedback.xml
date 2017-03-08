@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_gray"
+    android:orientation="vertical" >
+
+      <include 
+            android:id="@+id/menu"
+            layout="@layout/view_title"/>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="200.0dip"
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginRight="10.0dip"
+        android:layout_marginTop="20.0dip"
+      >
+
+        <EditText
+            android:id="@+id/edit_txt_message"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="top"
+            android:background="@drawable/input_text_orange_border"
+            android:focusableInTouchMode="true"
+            android:gravity="top"
+            android:hint="请输入您的宝贵意见，我们将为您提供更优质的服务"
+            android:padding="5.0dip"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="同意"
+            android:textColor="@color/black"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_message_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="20.0dip"
+        android:background="@color/orange_main"
+        android:gravity="center"
+        android:text="提交给我们"
+        android:padding="12dp"
+        android:textColor="@color/white"
+        
+        android:textSize="17.0sp" />
+
+</LinearLayout>

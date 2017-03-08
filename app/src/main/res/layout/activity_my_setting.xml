@@ -1,0 +1,187 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+ >
+       <include 
+            android:id="@+id/menu"
+            layout="@layout/view_title"/>
+ <LinearLayout
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:orientation="vertical"
+    android:layout_marginTop="75dp"
+      >
+     
+
+ <RelativeLayout
+     android:id="@+id/rlSettChangYong"
+     android:layout_width="match_parent"
+     android:layout_height="50dp"
+     android:background="@color/white"
+      >
+      <TextView 
+            android:id="@+id/tvSettChangYong"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textSize="16.5sp"
+          android:layout_alignParentLeft="true"
+          android:textColor="@color/black"
+          android:text="常用地址"
+          android:layout_centerVertical="true"
+          android:layout_marginLeft="10dp"
+          />
+ <ImageView 
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:background="@drawable/icn_arrow_right"
+     android:layout_alignParentRight="true"
+     android:layout_centerVertical="true"
+     android:layout_marginRight="10dp"
+     />
+     
+ </RelativeLayout>
+      
+       <View 
+           android:layout_width="match_parent"
+           android:layout_height="1px"
+           />
+ <RelativeLayout
+     android:layout_width="match_parent"
+     android:layout_height="50dp"
+     android:background="@color/white"
+      >
+      <TextView 
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textSize="16.5sp"
+          android:layout_alignParentLeft="true"
+          android:textColor="@color/black"
+          android:text="音效开关"
+          android:layout_centerVertical="true"
+          android:layout_marginLeft="10dp"
+          />
+    <com.fwh.commons.SwitchButton  
+        android:id="@+id/wiperSwitch1"  
+        android:layout_width="82dp"  
+        android:layout_height="23dp"  
+        android:layout_marginLeft="100dip" 
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:padding="15dp"
+        android:layout_marginRight="10dp"
+        />   
+     
+ </RelativeLayout>
+ 
+ 
+ 
+  
+       <RelativeLayout
+            android:id="@+id/rlSettYiJian"
+     android:layout_width="match_parent"
+     android:layout_height="50dp"
+     android:background="@color/white"
+     android:layout_marginTop="20dp"
+      >
+      <TextView 
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textSize="16.5sp"
+          android:layout_alignParentLeft="true"
+          android:textColor="@color/black"
+          android:text="意见反馈"
+          android:layout_centerVertical="true"
+          android:layout_marginLeft="10dp"
+          />
+ <ImageView 
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:background="@drawable/icn_arrow_right"
+     android:layout_alignParentRight="true"
+     android:layout_centerVertical="true"
+     android:layout_marginRight="10dp"
+     />
+     
+ </RelativeLayout>
+      
+       
+        <RelativeLayout
+             android:id="@+id/rlSettPengYou"
+     android:layout_width="match_parent"
+     android:layout_height="50dp"
+     android:background="@color/white"
+      android:layout_marginTop="1px"
+      >
+      <TextView 
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textSize="16.5sp"
+          android:layout_alignParentLeft="true"
+          android:textColor="@color/black"
+          android:text="告诉朋友"
+          android:layout_centerVertical="true"
+          android:layout_marginLeft="10dp"
+          />
+ <ImageView 
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:background="@drawable/icn_arrow_right"
+     android:layout_alignParentRight="true"
+     android:layout_centerVertical="true"
+     android:layout_marginRight="10dp"
+     />
+     
+ </RelativeLayout>
+      
+         <RelativeLayout
+              android:id="@+id/rlSettGuanYu"
+     android:layout_width="match_parent"
+     android:layout_height="50dp"
+     android:background="@color/white"
+      android:layout_marginTop="1px"
+      >
+      <TextView 
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textSize="16.5sp"
+          android:layout_alignParentLeft="true"
+          android:textColor="@color/black"
+          android:text="关于易发"
+          android:layout_centerVertical="true"
+          android:layout_marginLeft="10dp"
+          />
+ <ImageView 
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:background="@drawable/icn_arrow_right"
+     android:layout_alignParentRight="true"
+     android:layout_centerVertical="true"
+     android:layout_marginRight="10dp"
+     />
+     
+ </RelativeLayout>
+ </LinearLayout>
+ 
+ 
+
+      
+      
+     
+
+ 
+ 
+<TextView 
+    android:id="@+id/tvMySettingExit"
+    android:layout_marginBottom="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/white"
+    android:textColor="@color/black"
+    android:textSize="@dimen/activity_title_size"
+    android:text="后台退出"
+    android:layout_alignParentBottom="true"
+    android:gravity="center"
+    />
+</RelativeLayout>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+ android:background="@color/gray_bg_main"
+android:orientation="vertical"
+ >
+<RelativeLayout
+    android:layout_height="92dp"
+    android:layout_width="match_parent"
+     android:layout_gravity="center_vertical"
+    android:gravity="center_vertical"
+    android:background="@color/white"
+    android:layout_margin="10dp"
+     >
+        
+    <ImageView 
+        android:id="@+id/iv_select_che_icon"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:background="@drawable/scooter"
+        android:layout_marginLeft="10dp"
+        android:layout_centerVertical="true"
+
+        />
+        <View 
+            android:layout_width="1dp"
+            android:layout_height="60dp"
+            android:background="@color/green"
+              android:layout_marginLeft="45dp"
+        android:layout_centerVertical="true"
+            />
+        <LinearLayout 
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical"
+             android:layout_marginLeft="55dp"
+             android:layout_centerVertical="true"
+            >
+
+            <TextView
+                android:id="@+id/tv_select_che_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1.5dp"
+                android:text="电动车/摩托车"
+                android:textSize="14sp" />
+
+            <TextView 
+                android:id="@+id/tv_select_che_zaizhong"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="载重:1.5吨"
+                android:textSize="12sp"
+                android:textColor="@color/gray_font"
+                 android:layout_marginBottom="1.5dp"
+                />
+             <TextView 
+                android:id="@+id/tv_select_changkuan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="长*宽*高:2.7*1.3*1.5"
+                android:textSize="12sp"
+                android:textColor="@color/gray_font"
+                 android:layout_marginBottom="1.5dp"
+                />
+              <TextView 
+                android:id="@+id/tv_select_chaolichengshu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="超公里数费:5.0元/公里"
+                android:textSize="12sp"
+                android:textColor="@color/gray_font"
+                />
+            
+        </LinearLayout>
+        <ImageView 
+            android:id="@+id/iv_select_car_select"
+            android:layout_height="18dp"
+            android:layout_width="18dp"
+            android:background="@drawable/ic_right_normal"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="10dp"
+            />
+</RelativeLayout>
+
+</LinearLayout>

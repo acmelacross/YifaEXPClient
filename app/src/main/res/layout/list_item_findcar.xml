@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_holo_light"
+    
+    android:orientation="vertical">
+<RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+          android:layout_marginTop="15dp"
+      android:background="@color/white"
+        >
+    <TextView
+        android:id="@+id/category_name"
+        android:layout_width="90dp"
+        android:layout_height="40dp"
+        android:text="鲁F124486"
+        android:layout_centerVertical="true"
+         android:textSize="16sp"
+         android:gravity="center_vertical"
+         android:textColor="@color/black"
+         android:layout_marginLeft="8dp"
+         />
+
+    <ImageView
+        android:layout_width="17dp"
+        android:layout_height="31dp"
+        android:layout_marginLeft="85dp"
+         android:layout_centerVertical="true"
+        android:background="@drawable/label_shi" />
+
+    </RelativeLayout>
+    <View 
+        
+         android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/gray_holo_light"
+        />
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+          android:background="@color/white"
+        >
+        <ImageView 
+             android:id="@+id/ivFindCarImg"
+            android:layout_width="100dp"
+              android:layout_height="100dp"
+              android:background="@drawable/image_dialog_profession2"
+              android:layout_centerVertical="true"
+              android:layout_marginTop="10dp"
+              android:layout_marginBottom="10dp"
+              android:layout_marginLeft="10dp"
+				android:layout_marginRight="40dp"              
+            />
+        <TextView
+        android:id="@+id/tvFindCarInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="高栏车 5.5米"
+         android:textColor="@color/gray_font"
+         android:textSize="15sp"
+         android:singleLine="true"
+         android:layout_toRightOf="@id/ivFindCarImg"
+        android:layout_marginTop="25dp" />
+          <TextView
+        android:id="@+id/tvFindCarAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="山东省潍坊市振华商厦B座5楼602室内"
+         android:textColor="@color/gray_font"
+         android:textSize="15sp"
+         android:singleLine="true"
+         android:layout_toRightOf="@id/ivFindCarImg"
+         android:layout_centerVertical="true"
+        android:layout_marginTop="5dp" />
+          
+              <TextView
+        android:id="@+id/tvFindCarDistance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+         android:singleLine="true"
+         android:layout_alignParentBottom="true"
+         android:layout_toRightOf="@id/ivFindCarImg"
+          android:text="距离500米"
+           android:textSize="14sp"
+         />
+      <ImageView 
+        android:layout_width="20dp"
+        android:layout_height="10dp"       
+        android:background="@drawable/ic_truck"
+        android:layout_toLeftOf="@id/tvFindCarInfo"
+        android:layout_marginTop="28.5dp"
+        android:layout_marginRight="8dp"
+                  />
+        <ImageView 
+        android:layout_width="11dp"
+        android:layout_height="14.5dp"       
+        android:background="@drawable/ic_poi_loction"
+        android:layout_toLeftOf="@id/tvFindCarAddress"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+                  />
+          <ImageView 
+        android:layout_width="13dp"
+        android:layout_height="14dp"       
+        android:background="@drawable/ic_my_special_line"
+        android:layout_toLeftOf="@id/tvFindCarAddress"
+        android:layout_marginRight="10dp"
+          android:layout_alignParentBottom="true"
+          android:layout_marginBottom="28.5dp"
+                  />
+    </RelativeLayout>
+ <View 
+        
+         android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/gray_holo_light"
+        />
+<RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+          android:background="@color/white"
+        >
+ <TextView
+     android:id="@+id/tvFindCarCall"
+     android:layout_width="100dp"
+     android:layout_height="40dp"
+     android:text=" 拨 打 电 话 "
+     android:gravity="center"
+     android:layout_marginLeft="50dp"
+      android:textSize="15sp"
+     android:textColor="@color/green" />
+ <ImageView 
+      android:layout_width="17dp"
+     android:layout_height="20dp"
+      android:background="@drawable/ic_phone"
+      android:layout_centerVertical="true"
+      android:layout_marginLeft="20dp"
+     />
+   <View 
+        android:id="@+id/vTemp"
+         android:layout_width="1px"
+        android:layout_height="match_parent"
+        android:background="@color/gray_holo_light"
+        android:layout_centerInParent="true"
+        />
+    <ImageView 
+      android:layout_width="20dp"
+     android:layout_height="20dp"
+      android:background="@drawable/ic_check"
+      android:layout_centerVertical="true"
+      android:layout_marginLeft="20dp"
+      android:layout_toRightOf="@id/vTemp"
+     />
+    <TextView
+     android:id="@+id/tvFindCarTui"
+     android:layout_width="100dp"
+     android:layout_height="40dp"
+     android:text=" 推 送 资 源 "
+     android:gravity="center"
+      android:layout_toRightOf="@id/vTemp"
+     android:layout_marginLeft="50dp"
+      android:textSize="15sp"
+     android:textColor="@color/red" />
+ </RelativeLayout>
+    <View 
+        
+         android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/gray_holo_light"
+        />
+</LinearLayout>

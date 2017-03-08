@@ -1,11 +1,32 @@
 <resources>
 
-    <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+    <string name="app_nameq">易发智运</string>
+        <style name="AppTheme" parent="@android:style/Theme.NoTitleBar">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
-
+    <string name="smssdk_bind_mobile_show">注册或绑定手机演示</string>
+    <string name="smssdk_contact">进入主界面</string>
+    <string name="smssdk_appkey_dialog_title">请输入您的应用信息</string>
+    <string name="smssdk_appkey">AppKey</string>
+    <string name="smssdk_appkey_hint">请输入您的AppKey</string>
+    <string name="smssdk_appsecret">AppSecret</string>
+    <string name="smssdk_appsecrethint">请输入您的AppSecret</string>
+    	<style name="dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item><!--边框-->
+        <item name="android:windowIsFloating">true</item><!--是否浮现在activity之上-->
+        <item name="android:windowIsTranslucent">false</item><!--半透明-->
+        <item name="android:windowNoTitle">true</item><!--无标题-->
+       <!-- <item name="android:windowBackground">@color/alpha_bg</item>背景透明-->
+        <item name="android:backgroundDimEnabled">false</item><!--模糊-->
+    </style>
+    
+    	  	<style name="dialog_white" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item><!--边框-->
+         <item name="android:background">@color/bg_gray</item><!--背景-->
+        <item name="android:windowIsFloating">true</item><!--是否浮现在activity之上-->
+        <item name="android:windowIsTranslucent">false</item><!--半透明-->
+        <item name="android:windowNoTitle">true</item><!--无标题-->
+       <!-- <item name="android:windowBackground">@color/alpha_bg</item>背景透明-->
+        <item name="android:backgroundDimEnabled">false</item><!--模糊-->
+    </style>
 </resources>

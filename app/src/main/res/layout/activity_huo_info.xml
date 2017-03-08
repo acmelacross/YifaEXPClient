@@ -1,0 +1,447 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_gray"
+    
+  >
+ <include 
+            android:id="@+id/menu"
+            layout="@layout/view_title"/>
+ 
+  
+ <RelativeLayout
+        android:id="@+id/rlMapIndexChangeEXPWay"
+         android:layout_width="match_parent"
+	    android:layout_height="90dp"
+	    android:background="@color/gray_bg_main"
+	    android:layout_marginTop="10dp"
+	    android:visibility="gone"
+         >
+        <ImageView 
+             android:id="@+id/ivMapIndexTongCheng"
+        android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:background="@drawable/ic_tongcheng"
+	       android:layout_alignParentTop="true"
+	    android:layout_marginTop="15dp"
+	    android:layout_centerHorizontal="true"
+	    android:layout_marginLeft="108dp"
+	    android:layout_alignParentLeft="true"
+            />
+
+          <ImageView
+              android:id="@+id/ivMapIndexKuaidi"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+             android:layout_alignRight="@+id/ivMapIndexTongCheng"
+              android:layout_alignTop="@+id/ivMapIndexTongCheng"
+               android:layout_marginRight="100dp"
+                android:visibility="invisible"
+              android:background="@drawable/ic_kwt" />
+
+          <ImageView
+              android:id="@+id/ivMapIndexWuLiu"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+          
+              android:layout_alignTop="@+id/ivMapIndexTongCheng"
+             android:layout_marginRight="108dp"
+             android:layout_alignParentRight="true"
+              android:background="@drawable/ic_kwt" />
+<TextView 
+    android:id="@+id/tvMapIndexKuaidi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="17sp"
+        android:textColor="@color/black"
+        android:text="快递"
+        android:layout_below="@id/ivMapIndexKuaidi"
+             android:layout_alignRight="@+id/ivMapIndexTongCheng"
+               android:layout_marginRight="95dp"
+               android:visibility="invisible"
+    />
+<TextView 
+    android:id="@+id/tvMapIndexWuliu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="17sp"
+        android:textColor="@color/black"
+        android:text="物流"
+        android:layout_below="@id/ivMapIndexKuaidi"
+     android:layout_marginRight="100dp"
+     android:visibility="gone"
+     android:layout_alignParentRight="true"
+    /><!--    android:layout_alignLeft="@+id/ivMapIndexTongCheng"
+              android:layout_marginLeft="95dp" -->
+
+<TextView
+    android:id="@+id/tvMapIndexTongCheng"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+   android:layout_below="@id/ivMapIndexKuaidi"
+    android:text="同城"
+    android:layout_alignParentLeft="true"
+    android:layout_marginLeft="100dp"
+    android:textColor="@color/black"
+    android:textSize="17sp" />
+
+
+
+    </RelativeLayout>
+    
+
+ 
+ 
+ 
+ <RelativeLayout 
+     android:id="@+id/rlHuoInfoLeixing"
+        android:layout_width="match_parent"
+         android:layout_height="50dp"
+         android:background="@color/white"
+         android:layout_marginTop="1dp"
+     >
+     
+     <TextView 
+         android:id="@+id/tvHuoInfoLeixing"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:textColor="@color/black"
+         android:layout_centerVertical="true"
+         android:textSize="18sp"
+         android:text="货物类型"
+         android:layout_marginLeft="15dp"
+         />
+
+     <EditText
+         android:id="@+id/tvHuoInfoLeixingXuanze"
+         android:layout_width="150dp"
+         android:layout_height="match_parent"
+         android:layout_alignParentTop="true"
+         android:layout_centerHorizontal="true"
+         android:gravity="center"
+         android:hint="请输入货物类型"
+         android:background="@null"
+         android:textColor="@color/black"
+         android:textSize="15sp" />
+
+ </RelativeLayout>
+ <View 
+      android:layout_width="match_parent"
+         android:layout_height="1px"
+         android:background="@color/gray_font"
+         android:layout_marginLeft="15dp"
+           android:visibility="gone"
+     />
+  <RelativeLayout 
+        android:layout_width="match_parent"
+         android:layout_height="50dp"
+         android:background="@color/white"
+         android:id="@+id/rlHuoInfoZhongliang"
+         android:visibility="gone"
+     >
+     
+     <TextView 
+         android:id="@+id/tvHuoInfoZhongliang"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:textColor="@color/black"
+         android:layout_centerVertical="true"
+         android:textSize="18sp"
+         android:text="重量/体积"
+         android:layout_marginLeft="15dp"
+         />
+     
+     <TextView 
+         android:id="@+id/tvHuoInfoZhongliangXuanze"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:textColor="@color/black"
+		android:layout_centerInParent="true"
+         android:textSize="15sp"
+         android:layout_marginLeft="20dp"
+         android:hint="请输入重量/体积"
+         android:inputType="number"
+         android:layout_toRightOf="@id/tvHuoInfoZhongliang"
+         />
+ </RelativeLayout>
+ <View 
+      android:layout_width="match_parent"
+         android:layout_height="1px"
+         android:background="@color/gray_font"
+         android:layout_marginLeft="15dp"
+           android:visibility="gone"
+     />
+ <RelativeLayout 
+       android:id="@+id/rlHuoInfoZhuansan"
+        android:layout_width="match_parent"
+         android:layout_height="50dp"
+         android:background="@color/white"
+         android:visibility="gone"
+     >
+     
+     <TextView 
+         android:id="@+id/tvHuoInfoZhuanSan"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:textColor="@color/black"
+         android:layout_centerVertical="true"
+         android:textSize="18sp"
+         android:text="整车/散货"
+         android:layout_marginLeft="15dp"
+         />
+     
+     <TextView 
+         android:id="@+id/tvHuoInfoZhuanSanXuanze"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:textColor="@color/black"
+		android:layout_centerInParent="true"
+         android:textSize="15sp"
+         android:layout_marginLeft="20dp"
+         android:hint="请选择整车/散货"
+         android:inputType="number"
+         android:layout_toRightOf="@id/tvHuoInfoZhuanSan"
+         />
+ </RelativeLayout>
+ <RelativeLayout 
+          android:id="@+id/rlHuoInfoWuLiuGongSi"
+        android:layout_width="match_parent"
+         android:layout_height="50dp"
+         android:background="@color/white"
+         android:layout_marginTop="10dp"
+     >
+     
+     <TextView 
+           android:id="@+id/tvHuoInfoHuoWuLiuGongSi"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:textColor="@color/black"
+         android:layout_centerVertical="true"
+         android:textSize="18sp"
+         android:text="物流公司"
+         android:layout_marginLeft="15dp"
+         />
+     
+     <TextView 
+         android:id="@+id/tvHuoInfoHuoInfoWuLiuGongSi"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:textColor="@color/black"
+		android:layout_centerInParent="true"
+         android:textSize="16sp"
+         android:layout_marginLeft="20dp"
+         android:hint="请选择物流公司"
+         android:layout_toRightOf="@id/tvHuoInfoHuoWuLiuGongSi"
+         />
+ </RelativeLayout>
+ 
+ <RelativeLayout 
+          android:id="@+id/rlHuoInfoaWuLiuChe"
+        android:layout_width="match_parent"
+         android:layout_height="50dp"
+         android:background="@color/white"
+         android:layout_marginTop="10dp"
+     >
+
+     <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentLeft="true"
+         android:layout_centerVertical="true"
+         android:layout_marginLeft="16dp"
+         android:text="物流车"
+         android:textColor="@color/black"
+         android:textSize="18sp" />
+
+     <EditText
+         android:id="@+id/tvHuoInfoWuLiuChe"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignBottom="@+id/tvHuoInfoWuLiuChe"
+         android:layout_centerInParent="true"
+         android:hint="请输入物流车信息"
+         android:textColor="@color/black"
+         android:background="@null"
+         android:textSize="16sp" />
+
+ </RelativeLayout>
+ 
+    <RelativeLayout 
+          android:id="@+id/rlHuoInfoCheXing"
+        android:layout_width="match_parent"
+         android:layout_height="50dp"
+         android:background="@color/white"
+         android:layout_marginTop="10dp"
+     >
+     
+     <TextView 
+         android:id="@+id/tvHuoInfoCheXing"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:textColor="@color/black"
+         android:layout_centerVertical="true"
+         android:textSize="18sp"
+         android:text="所需车型"
+         android:layout_marginLeft="15dp"
+         />
+     
+     <TextView 
+         android:id="@+id/tvHuoInfoCheXingXuanze"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:textColor="@color/black"
+		android:layout_centerInParent="true"
+         android:textSize="16sp"
+         android:layout_marginLeft="20dp"
+         android:hint="请选择需要的车型"
+         android:layout_toRightOf="@id/tvHuoInfoCheXing"
+         />
+ </RelativeLayout>
+ <RelativeLayout 
+        android:layout_width="match_parent"
+         android:layout_height="50dp"
+         android:background="@color/white"
+         android:layout_marginTop="10dp"
+     >
+     
+     <TextView 
+         android:id="@+id/tvHuoInfoBeiZhu"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:textColor="@color/black"
+         android:layout_centerVertical="true"
+         android:textSize="18sp"
+         android:text="其他要求"
+         android:layout_marginLeft="15dp"
+         />
+     
+     <EditText 
+         android:id="@+id/dtHuoInfoBeizhu"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:textColor="@color/black"
+		android:layout_centerInParent="true"
+         android:textSize="16sp"
+         android:layout_marginLeft="20dp"
+         android:hint="如跟车 回单等"
+         android:background="@color/white"
+         android:layout_toRightOf="@id/tvHuoInfoBeiZhu"
+         />
+ </RelativeLayout>
+ 
+ 
+ <RelativeLayout 
+       android:id="@+id/rlXianShiDa1"
+        android:layout_width="match_parent"
+         android:layout_height="50dp"
+         android:background="@color/white"
+         android:layout_marginTop="10dp"
+     >
+     
+     <TextView 
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:textColor="@color/black"
+         android:layout_centerVertical="true"
+         android:textSize="18sp"
+         android:text="限时达:"
+         android:layout_marginLeft="15dp"
+         />
+         <TextView 
+             android:id="@+id/tvXianShiDa1"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:textColor="@color/white"
+         android:layout_centerVertical="true"
+         android:textSize="14sp"
+         android:text="当日达"
+         android:background="@color/orange_main"
+         android:layout_marginLeft="95dp"
+             android:onClick="dangRiClick"
+         />
+             <TextView 
+                  android:id="@+id/tvXianShiDa2"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:textColor="@color/black"
+         android:layout_centerVertical="true"
+         android:textSize="14sp"
+         android:text="1小时"
+         android:layout_marginLeft="175dp"
+          android:onClick="yiXiaoShiClick"
+         />
+              <TextView 
+                    android:id="@+id/tvXianShiDa3"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:textColor="@color/black"
+         android:layout_centerVertical="true"
+         android:textSize="14sp"
+         android:text="2小时"
+         android:layout_marginLeft="255dp"
+                  android:onClick="liangXiaoShiClick"
+         />
+     
+ </RelativeLayout>
+ 
+ <RelativeLayout 
+      android:layout_width="match_parent"
+      android:layout_height="60dp"
+    	android:layout_gravity="center"
+    	android:background="@color/white"
+    	android:layout_marginTop="10dp"
+    	
+     >
+     
+       <TextView 
+           android:layout_width="wrap_content"
+    	   android:layout_height="wrap_content"
+    	   android:layout_marginLeft="15dp"
+    	   android:layout_marginRight="5dp"
+    	    android:textSize="18sp"
+    	   android:text="是否预约"
+    	   android:textColor="@color/black"
+    	   android:gravity="center"
+    	   android:layout_centerVertical="true"
+    	   android:layout_alignParentLeft="true"
+    	   />
+ 
+    <TextView 
+         android:id="@+id/tvMapIndexYuYue"
+           android:layout_width="50dp"
+    	   android:layout_height="50dp"
+    	   android:background="@drawable/map_index_yuyue_btn_normal"
+    	   android:layout_marginLeft="5dp"
+    	   android:layout_marginRight="5dp"
+    	    android:textSize="18sp"
+    	   android:text="实时"
+    	   android:textColor="@color/orange_main"
+    	   android:gravity="center"
+    	   android:layout_centerInParent="true"
+    	   />
+     </RelativeLayout>
+  <TextView
+    android:id="@+id/tvMapHuoChakanPayInfo"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="查 看 收 费 标 准"
+    android:textColor="@color/orange_main"
+    android:layout_gravity="center_horizontal"
+    android:layout_margin="8dp"
+    android:textSize="15sp" />
+ 
+
+ <TextView
+     android:id="@+id/tvHuoInfoConfirm"
+     android:layout_width="match_parent"
+     android:layout_height="50dp"
+     android:layout_margin="30dp"
+     android:background="@color/orange_main"
+     android:gravity="center"
+     android:text="提  交"
+     android:textColor="@color/white"
+     android:textSize="18sp" />
+
+</LinearLayout>

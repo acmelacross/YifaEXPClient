@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="130dp"
+    android:paddingLeft="10dp"
+ android:background="@color/white"
+android:padding="10dp"
+android:orientation="vertical"
+ >
+<RelativeLayout
+    android:layout_height="28dp"
+    android:layout_width="match_parent"
+     android:layout_gravity="center_vertical"
+    android:gravity="center_vertical"
+     >
+          <TextView 
+    android:id="@+id/tvMyJourneyTime"
+    android:layout_width="wrap_content"
+    android:layout_height="22dp"
+    android:text="数据努力加载中..."
+    android:textColor="@color/black"
+      android:textSize="17sp"
+      android:layout_marginLeft="5dp"
+       android:gravity="center_vertical"
+    />
+        
+          <TextView 
+    android:id="@+id/tvMyJourneyState"
+    android:layout_width="wrap_content"
+    android:layout_height="22dp"
+    android:text="数据努力加载中..."
+    android:textColor="@color/gray_font"
+      android:textSize="17sp"
+       android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+         android:gravity="center_vertical"
+    />
+        
+</RelativeLayout>
+
+        
+<RelativeLayout
+    android:layout_height="55dp"
+    android:layout_width="match_parent"
+    android:layout_gravity="center_vertical"
+    android:gravity="center_vertical"
+    android:layout_marginTop="-10dp"
+      android:layout_marginBottom="-10dp"
+     >
+        
+<ImageView 
+    android:id="@+id/tmpImageStart"
+    android:layout_width="13.68dp"
+    android:layout_height="18dp"
+    android:background="@drawable/common_icn_startpoint"
+    android:layout_centerVertical="true"
+    android:layout_margin="5dp"
+    />
+
+<TextView 
+    android:id="@+id/tvMyJourneyStartPlace"
+    android:layout_width="wrap_content"
+    android:layout_height="35dp"
+    android:text="数据努力加载中..."
+    android:textColor="@color/black"
+   android:layout_toRightOf="@id/tmpImageStart"
+     android:layout_centerVertical="true"
+      android:textSize="17sp"
+      android:gravity="center_vertical"
+    />
+<ImageView
+      android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+     android:background="@drawable/icn_arrow_right"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+    />
+
+</RelativeLayout>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="35dp"
+    android:gravity="center_vertical" >
+
+    <ImageView
+        android:id="@+id/tmpImageEnd"
+        android:layout_width="13.68dp"
+        android:layout_height="18dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:background="@drawable/common_icn_endpoint" />
+
+    <TextView
+        android:id="@+id/tvMyJourneyEndPlace"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/tmpImageEnd"
+        android:gravity="center_vertical"
+        android:text="数据努力加载中..."
+        android:textColor="@color/black"
+        android:textSize="17sp" />
+</RelativeLayout>
+
+</LinearLayout>

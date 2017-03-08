@@ -3,4 +3,36 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+
+    <color name="gray_bg_main">#f5f5f5</color>
+    <color name="gray_fill">#96978f</color>
+    <color name="orange_main">#ff8903</color>
+
+
+
+
+
+    <item name="gray_holo_dark" type="color">#ff464646</item>
+    <item name="gray_holo_light" type="color">#ffd0d0d0</item>
+    <color name="white">#ffffff</color>
+    <color name="light_gray">#ffe6e6e6</color>
+    <color name="black">#ff000000</color>
+    <!-- #ff23c5a8 -->
+    <color name="green">#00cc00</color>
+    <color name="title_green">#33cc99</color>
+    <color name="bg_gray">#ffefebe7</color>
+    <!-- 快速注册金黄色 -->
+    <color name="goldyellow">#ff9428</color>
+    <!-- listview 选中颜色 -->
+    <color name="red">#ff0000</color>
+    <color name="red2">#ff6666</color>
+    <color name="list_yellow">#ffff99</color>
+    <color name="black_font">#3f3c33</color>
+    <color name="gray_font">#8d8d8d</color>
+    <color name="login_button">#ff775025</color>
+    <color name="toast_color">#ff2E76B9</color>
+    <color name="blue_shoping_item">#3c7dd0</color>
+    <color name="pink_shoping_item">#ec008c</color>
+    <color name="black_shoping_item_chima">#666666</color>
 </resources>

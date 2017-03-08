@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="10dp"
+ android:background="@color/gray_bg_main"
+    android:orientation="vertical" >
+<TextView 
+    android:id="@+id/tv_item_poi_title"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="潍坊百货大楼"
+     android:layout_marginTop="10dp"
+     android:textColor="@color/black"
+   
+    android:textSize="19sp" >
+
+</TextView>
+<TextView 
+     android:id="@+id/tv_item_poi_content"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="东风街123号"
+    android:textColor="@color/gray_fill"
+     android:layout_marginBottom="10dp"
+    android:textSize="17sp" >
+
+</TextView>
+</LinearLayout>

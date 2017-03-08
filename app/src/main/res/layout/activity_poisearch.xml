@@ -1,0 +1,84 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     android:background="@color/gray_bg_main"
+   >
+    <RelativeLayout
+        android:id="@+id/actPoiTitle"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:background="@color/gray_bg_main"
+     >
+    <ImageView 
+        android:id="@+id/imgvPoiTitleBack"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/btn_title_bar"
+       android:layout_centerVertical="true"
+        android:layout_margin="10dp"
+        />
+        <AutoCompleteTextView 
+    android:id="@+id/etPOIInput"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_marginLeft="50dp"
+    android:layout_marginRight="50dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
+    android:padding="5dp"
+    android:hint="输入地址"
+    android:background="@drawable/input_text_orange_border"
+    />
+    
+        
+            <ImageView 
+         android:id="@+id/imgvMapIndexChangeTextVoice"
+           android:layout_width="40dp"
+    	   android:layout_height="40dp"
+    	   android:background="@drawable/map_index_channel_voice_normal"
+    	   android:layout_marginRight="5dp"
+    	   android:layout_alignParentRight="true"
+    	       android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
+    	   
+    	   />
+        
+        
+            <EditText 
+            android:id="@+id/etPOIInfo"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:padding="5dp"
+    android:layout_centerVertical="true"
+    android:hint="输入基本信息(重量，体积)"
+    android:background="@drawable/input_text_orange_border"
+        android:layout_below="@id/etPOIInput"
+        android:visibility="gone"
+            />
+            
+                <com.fwh.commons.CustomerSpinner
+        android:id="@+id/spinner"
+       android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:padding="5dp"
+    android:layout_centerVertical="true"
+    android:background="@drawable/input_text_orange_border"
+    android:visibility="gone"
+        android:layout_below="@id/etPOIInput" />
+    </RelativeLayout>
+<ListView 
+    android:id="@+id/listPoiContent"
+   android:layout_margin="5dp"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+     android:layout_below="@id/actPoiTitle"
+    ></ListView>
+ 
+
+</RelativeLayout>

@@ -1,0 +1,162 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+     android:gravity="center"
+>
+      <include 
+            android:id="@+id/menu"
+            layout="@layout/view_title"/>
+
+    <com.amap.api.maps.MapView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="200dp" 
+         android:layout_below="@id/menu"
+         android:layout_marginBottom="50dp"
+        />
+   <LinearLayout 
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_below="@id/map"
+       android:layout_marginBottom="50dp"
+       android:orientation="vertical"
+       >
+       <RelativeLayout 
+           android:layout_width="match_parent"
+           android:layout_height="40dp"
+             android:background="@color/white"
+             android:layout_marginBottom="1px"
+           >
+           <TextView 
+         android:layout_width="wrap_content"
+         android:layout_height="match_parent"
+         android:textColor="@color/black"
+         android:layout_centerVertical="true"
+         android:textSize="18sp"
+         android:text="总里程:"
+         android:gravity="center"
+         android:layout_marginLeft="15dp"
+         />
+
+     <TextView
+        android:id="@+id/tvHuoConfirmMileage"
+         android:layout_width="wrap_content"
+         android:layout_height="match_parent"
+         android:layout_alignParentTop="true"
+         android:layout_centerHorizontal="true"
+         android:gravity="center"
+         android:textColor="@color/gray_holo_dark"
+         android:text="200"
+          android:layout_centerVertical="true"
+         android:textSize="15sp" />
+           
+       </RelativeLayout>
+       
+       <RelativeLayout 
+           android:layout_width="match_parent"
+           android:layout_height="40dp"
+             android:background="@color/white"
+             android:layout_marginBottom="1px"
+           >
+           <TextView 
+         android:layout_width="wrap_content"
+         android:layout_height="match_parent"
+         android:textColor="@color/black"
+         android:layout_centerVertical="true"
+         android:textSize="18sp"
+         android:text="起步价:"
+         android:gravity="center"
+         android:layout_marginLeft="15dp"
+         />
+
+     <TextView
+        android:id="@+id/tvHuoConfirmQiBu"
+         android:layout_width="wrap_content"
+         android:layout_height="match_parent"
+         android:layout_alignParentTop="true"
+         android:layout_centerHorizontal="true"
+         android:gravity="center"
+         android:textColor="@color/gray_holo_dark"
+         android:text="未指定车辆"
+          android:layout_centerVertical="true"
+         android:textSize="15sp" />
+           
+       </RelativeLayout>
+          <RelativeLayout 
+           android:layout_width="match_parent"
+           android:layout_height="40dp"
+             android:background="@color/white"
+             android:layout_marginBottom="1px"
+           >
+           <TextView 
+         android:layout_width="wrap_content"
+         android:layout_height="match_parent"
+         android:textColor="@color/black"
+         android:layout_centerVertical="true"
+         android:textSize="18sp"
+         android:text="超里程费:"
+         android:gravity="center"
+         android:layout_marginLeft="15dp"
+         />
+
+     <TextView
+        android:id="@+id/tvHuoConfirmChaoLiCheng"
+         android:layout_width="wrap_content"
+         android:layout_height="match_parent"
+         android:layout_alignParentTop="true"
+         android:layout_centerHorizontal="true"
+         android:gravity="center"
+         android:textColor="@color/gray_holo_dark"
+         android:text="未指定"
+          android:layout_centerVertical="true"
+         android:textSize="15sp" />
+           
+       </RelativeLayout>
+       
+             <RelativeLayout 
+           android:layout_width="match_parent"
+           android:layout_height="40dp"
+             android:background="@color/white"
+             android:layout_marginBottom="1px"
+           >
+           <TextView 
+         android:layout_width="wrap_content"
+         android:layout_height="match_parent"
+         android:textColor="@color/black"
+         android:layout_centerVertical="true"
+         android:textSize="18sp"
+         android:text="付款方式:"
+         android:gravity="center"
+         android:layout_marginLeft="15dp"
+         />
+
+     <TextView
+        android:id="@+id/tvHuoConfirmZaixian"
+         android:layout_width="40dp"
+         android:layout_height="40dp"
+         android:layout_alignParentTop="true"
+         android:layout_centerHorizontal="true"
+         android:gravity="center"
+         android:textColor="@color/orange_main"
+         android:text="到付"
+          android:layout_centerVertical="true"
+          android:background="@drawable/map_index_yuyue_btn_normal"
+         android:textSize="12sp" />
+           
+       </RelativeLayout>
+       
+   </LinearLayout>
+<TextView 
+    android:id="@+id/tv_huo_confirm"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:text="确 认 发 送"
+    android:gravity="center"
+    android:textSize="19.5sp"
+    android:textColor="@color/white"
+    android:background="@color/orange_main"
+    android:layout_alignParentBottom="true"
+    />
+</RelativeLayout>

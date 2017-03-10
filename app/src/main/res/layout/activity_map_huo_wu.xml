@@ -20,7 +20,7 @@
             android:id="@+id/ivTempHead"
             android:layout_width="75dp"
             android:layout_height="75dp"
-            android:background="@drawable/pinyou_icn_head"
+            android:background="@drawable/ic_driver_head"
             android:layout_margin="10dp"
             />
 
@@ -103,8 +103,8 @@
 
             <TextView
                 android:id="@+id/tvTemp"
-                android:layout_width="18dp"
-                android:layout_height="30dp"
+                android:layout_width="15dp"
+                android:layout_height="28dp"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:layout_margin="10dp"

@@ -58,16 +58,33 @@ TextView tvMySettingExit;
 				contactsPage.show(MySettingActivity.this);
 			}
 		});
-		//关于
+		//业务合作
 		RelativeLayout rlSettGuanYu = (RelativeLayout)findViewById(R.id.rlSettGuanYu);
 		rlSettGuanYu.setOnClickListener(new OnClickListener() {
 			public void onClick(View arg0) {
-				new AlertDialog.Builder(MySettingActivity.this)
-				.setTitle("关于我们 ")
-				.setMessage("易发快运  \n网站꣺www.baidu.com\n ")
-						.show();
+//				new AlertDialog.Builder(MySettingActivity.this)
+//				.setTitle("关于我们 ")
+//				.setMessage("易发快运  \n网站꣺www.baidu.com\n ")
+//						.show();
+				startActivity(new Intent().setClass(getApplicationContext(), AboutUsActivity.class));
+
 			}
 		});
+
+		//技术合作
+		RelativeLayout rlSettGuanYuWomen = (RelativeLayout)findViewById(R.id.rlSettGuanYuWomen);
+		rlSettGuanYuWomen.setOnClickListener(new OnClickListener() {
+			public void onClick(View arg0) {
+//				new AlertDialog.Builder(MySettingActivity.this)
+//				.setTitle("关于我们 ")
+//				.setMessage("易发快运  \n网站꣺www.baidu.com\n ")
+//						.show();
+				startActivity(new Intent().putExtra("isSoft",true).setClass(getApplicationContext(), AboutUsActivity.class));
+
+			}
+		});
+
+
 		tvMySettingExit = (TextView) findViewById(R.id.tvMySettingExit);
 		tvMySettingExit.setOnClickListener(new OnClickListener() {
 			public void onClick(View arg0) {

@@ -30,6 +30,14 @@ public class PayInfoActivity extends Activity {
 		WebView webView = (WebView) findViewById(R.id.webView);
 		//webView.loadUrl("http://www.wenyuwangdai.com");
 		//webView.loadUrl("http://www.weather.com.cn/textFC/hb.shtml");
+
+		//        if(b){
+//            webView.loadUrl("http://www.baidu.com");//u.eqxiu.com/s/e7Cygpmq
+//
+//        }else{
+//            webView.loadUrl("http://yifaexpuser.bmob.site");
+//        }
+//
 		webView.loadUrl("file:///android_asset/myhtml.html");
 		WebSettings webSettings =   webView .getSettings();       
 		//webSettings.setJavaScriptEnabled(true);  

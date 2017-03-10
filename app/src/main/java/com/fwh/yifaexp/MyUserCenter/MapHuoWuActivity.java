@@ -31,10 +31,11 @@ import com.fwh.utils.Constants;
 import com.fwh.utils.FailedlWrite;
 import com.fwh.utils.MyMapUtil;
 import com.fwh.utils.ToastUtil;
+import com.fwh.yifaexp.CheckPermissionsActivity;
 import com.fwh.yifaexp.R;
 import com.fwh.yifaexp.model.GoodsForYifa;
 
-public class MapHuoWuActivity extends Activity {
+public class MapHuoWuActivity extends CheckPermissionsActivity {
 	private AMap aMap;
 	private MapView mapView;
 	private GoodsForYifa good = MyJourneyActivity.goodTemp;

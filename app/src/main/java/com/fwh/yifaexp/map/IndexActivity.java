@@ -494,7 +494,7 @@ public class IndexActivity extends CheckPermissionsActivity implements LocationS
 			break;
 		case R.id.tvMapIndexMenuWuLiuFee: // 物流费用查询
 			startActivity(new Intent().setClass(getApplicationContext(),
-					MyJourneyActivity.class));
+					PayInfoActivity.class));
 			break;
 		case R.id.tvMapIndexMenuJiFen: // 联系客服
 			// ToastUtil.show(getApplicationContext(), "该功能暂未开放");
@@ -534,14 +534,9 @@ public class IndexActivity extends CheckPermissionsActivity implements LocationS
 			break;
 		case R.id.tvMapIndexMenufenxiangyoujiang: // 点击分享有奖
 			// // 打开通信录好友列表页面
-			// Intent intent2=new Intent(Intent.ACTION_SEND);
-			// intent2.setType("image/*");
-			// intent2.putExtra(Intent.EXTRA_SUBJECT, "分享");
-			// intent2.putExtra(Intent.EXTRA_TEXT, "终于可以了在家喊物流啦!!!");
-			// intent2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-			// startActivity(Intent.createChooser(intent2, getTitle()));
-			ContactsPage contactsPage = new ContactsPage();
-			contactsPage.show(this);
+			ToastUtil.show(getApplicationContext(), "该功能暂未开放");
+//			ContactsPage contactsPage = new ContactsPage();
+//			contactsPage.show(this);
 			break;
 		case R.id.tvMapIndexMenuXiaoXi: // 我的小心监听
 			break;

@@ -16,12 +16,13 @@ import cn.bmob.v3.listener.FindListener;
 
 import com.fwh.utils.FailedlWrite;
 import com.fwh.utils.ToastUtil;
+import com.fwh.yifaexp.CheckPermissionsActivity;
 import com.fwh.yifaexp.R;
 import com.fwh.yifaexp.map.adapter.FindCarAdapter;
 import com.fwh.yifaexp.model.GoodsForYifa;
 import com.fwh.yifaexp.model.UserForYifa;
 
-public class FindCarActivity extends Activity {
+public class FindCarActivity extends CheckPermissionsActivity {
 	ListView lvMyJourney = null;
 	List<GoodsForYifa> list = new ArrayList<GoodsForYifa>();
 	FindCarAdapter adapter;;
@@ -74,6 +75,7 @@ public class FindCarActivity extends Activity {
 		BmobQuery<UserForYifa> bmobQuery = new BmobQuery<UserForYifa>();
 		bmobQuery.addWhereNear("gpsAdd", user.getGpsAdd());
 		bmobQuery.addWhereEqualTo("type", 2);
+		bmobQuery.addWhereNotEqualTo("isBusy", true);
 		bmobQuery.setLimit(10);    //获取最接近用户地点的10条数据
 		bmobQuery.findObjects(this, new FindListener<UserForYifa>() {
 		    @Override

@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.fwh.yifaexp.R;
@@ -47,13 +48,17 @@ public class MyJourneyAdapter extends BaseAdapter {
 	    	          content.setText(list.get(position).getCreatedAt());
 	    	      	TextView tvMyJourneyState = mViewHolder
 	    	    			.getView(R.id.tvMyJourneyState);
+		ImageView iv_lt_myjourney_order_state =mViewHolder
+				.getView(R.id.iv_lt_myjourney_order_state);
 	    	      	//System.out.println("list.get(position).getiGoodState()"+list.get(position).getObjectId());
 	    	      	switch (list.get(position).getiGoodState()) {//货物当前状态 0废弃 1接单中 2配送中 3已抵达  
 	    			case 0:
 	    				tvMyJourneyState.setText("已取消");
+						iv_lt_myjourney_order_state.setBackgroundResource(R.drawable.order_detail_cancel);
 	    				break;
 	    			case 1:
 	    				tvMyJourneyState.setText("接单中");
+						iv_lt_myjourney_order_state.setBackgroundResource(R.drawable.order_detail_normal);
 	    				break;
 	    			case 2:
 	    				tvMyJourneyState.setText("派送中");

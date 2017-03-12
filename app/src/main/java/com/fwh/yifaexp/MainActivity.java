@@ -31,7 +31,10 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
 import cn.bmob.v3.Bmob;
+import cn.bmob.v3.listener.BmobUpdateListener;
 import cn.bmob.v3.listener.SaveListener;
+import cn.bmob.v3.update.BmobUpdateAgent;
+import cn.bmob.v3.update.UpdateResponse;
 import cn.smssdk.EventHandler;
 import cn.smssdk.SMSSDK;
 import cn.smssdk.gui.CommonDialog;
@@ -173,6 +176,18 @@ public class MainActivity extends Activity implements OnClickListener,Callback {
 //		}
         //延迟跳转到主页
         handler.sendEmptyMessageDelayed(0, 200);
+
+
+        BmobUpdateAgent.update(this);
+        BmobUpdateAgent.setUpdateOnlyWifi(false);
+//        BmobUpdateAgent.setUpdateListener(new BmobUpdateListener() {
+//            @Override
+//            public void onUpdateReturned(int updateStatus, UpdateResponse updateInfo) {
+//                // TODO Auto-generated method stub
+//                //根据updateStatus来判断更新是否成功
+//                System.out.println("updateStatus   "+ updateStatus);
+//            }
+//        });
     }
     //原来显示对话框，现在直接载入
     private void showAppkeyDialog() {

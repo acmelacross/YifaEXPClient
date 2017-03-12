@@ -47,7 +47,7 @@
         <activity
             android:name=".map.IndexActivity"
             android:screenOrientation="portrait" />
-        \
+
         <activity
             android:name=".map.POISearchActivity"
             android:label="@string/title_activity_poisearch"></activity>
@@ -127,6 +127,12 @@
             android:value="first_sanliuling" />
 
         <activity android:name=".MyUserCenter.AboutUsActivity"></activity>
+
+
+        <activity
+            android:name="cn.bmob.v3.update.UpdateDialogActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
     </application>
 
 </manifest>

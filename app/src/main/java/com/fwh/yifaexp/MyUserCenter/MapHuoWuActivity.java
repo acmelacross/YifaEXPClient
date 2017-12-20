@@ -9,12 +9,17 @@ import org.json.JSONObject;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.Dialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import cn.bmob.v3.listener.UpdateListener;
@@ -104,9 +109,11 @@ public class MapHuoWuActivity extends CheckPermissionsActivity {
 				new View.OnClickListener() {
 					@Override
 					public void onClick(View arg0) {
+						System.out.println("aaaaaaaaaaaaaaaa");
 						pay();//good
 					}
-				});
+				}
+				);
 		// 初始化 付款按钮 货到付款
 		TextView tv_mapHuoPayDao = (TextView)findViewById(R.id.tv_mapHuoPayDao);
 		tv_mapHuoPayDao.setOnClickListener(
@@ -225,43 +232,64 @@ public class MapHuoWuActivity extends CheckPermissionsActivity {
 	/**
 	 * 发起支付
 	 */
+	Dialog dia;
 	private void pay() {
-		// 发起支付
-		// 构建账单json对象
-		String orderNo = new SimpleDateFormat("yyyyMMddhhmmss")
-				.format(new Date());
+		//Context context = MapHuoWuActivity.this;
+		 dia = new Dialog(MapHuoWuActivity.this, R.style.edit_AlertDialog_style);
+		dia.setContentView(R.layout.activity_start_dialog);
+		ImageView imageView = (ImageView) dia.findViewById(R.id.iv_pay_internet);
 
-		// 计算总金额（以分为单位）
-		int amount = 0;
-		JSONArray billList = new JSONArray();
-		// for (Good good : mList) {
-		// amount += good.getPrice() * good.getCount() * 100;
-		billList.put(good.getString());
-		// }
-		// 自定义的额外信息 选填
-		JSONObject extras = new JSONObject();
-		try {
-			extras.put("extra1", "extra1");
-			extras.put("extra2", "extra2");
-		} catch (JSONException e) {
-			e.printStackTrace();
-		}
-		JSONObject bill = new JSONObject();
-		JSONObject displayItem = new JSONObject();
-		try {
-			displayItem.put("name", "商品");
-			displayItem.put("contents", billList);
-			JSONArray display = new JSONArray();
-			display.put(displayItem);
-			bill.put("order_no", orderNo);
-			bill.put("amount", amount);
-			bill.put("display", display);
-			// bill.put("extras", extras);// 该字段选填
-		} catch (JSONException e) {
-			e.printStackTrace();
-		}
-//		PayActivity.CallPayActivity(MapHuoWuActivity.this, bill.toString(),
-//				"www.baidu.com");
+		//选择true的话点击其他地方可以使dialog消失，为false的话不会消失
+		dia.setCanceledOnTouchOutside(true); // Sets whether this dialog is
+		Window w = dia.getWindow();
+		WindowManager.LayoutParams lp = w.getAttributes();
+		lp.x = 0;
+		lp.y = 40;
+		dia.onWindowAttributesChanged(lp);
+		imageView.setOnClickListener(
+				new View.OnClickListener() {
+					@Override
+					public void onClick(View view) {
+						dia.dismiss();
+					}
+				});
+dia.show();
+//		// 发起支付
+//		// 构建账单json对象
+//		String orderNo = new SimpleDateFormat("yyyyMMddhhmmss")
+//				.format(new Date());
+//
+//		// 计算总金额（以分为单位）
+//		int amount = 0;
+//		JSONArray billList = new JSONArray();
+//		// for (Good good : mList) {
+//		// amount += good.getPrice() * good.getCount() * 100;
+//		billList.put(good.getString());
+//		// }
+//		// 自定义的额外信息 选填
+//		JSONObject extras = new JSONObject();
+//		try {
+//			extras.put("extra1", "extra1");
+//			extras.put("extra2", "extra2");
+//		} catch (JSONException e) {
+//			e.printStackTrace();
+//		}
+//		JSONObject bill = new JSONObject();
+//		JSONObject displayItem = new JSONObject();
+//		try {
+//			displayItem.put("name", "商品");
+//			displayItem.put("contents", billList);
+//			JSONArray display = new JSONArray();
+//			display.put(displayItem);
+//			bill.put("order_no", orderNo);
+//			bill.put("amount", amount);
+//			bill.put("display", display);
+//			// bill.put("extras", extras);// 该字段选填
+//		} catch (JSONException e) {
+//			e.printStackTrace();
+//		}
+////		PayActivity.CallPayActivity(MapHuoWuActivity.this, bill.toString(),
+////				"www.baidu.com");
 	}
 	private void updatePayState(int state)
 	{

@@ -211,6 +211,7 @@ public class IndexActivity extends CheckPermissionsActivity implements LocationS
 		//aMap.moveCamera(CameraUpdateFactory.zoomTo(15));
 
 		// aMap.setMyLocationType()
+		aMap.moveCamera(CameraUpdateFactory.zoomTo(15.0f));
 
 	}
 

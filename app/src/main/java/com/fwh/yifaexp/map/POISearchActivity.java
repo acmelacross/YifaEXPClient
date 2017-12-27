@@ -256,8 +256,10 @@ public class POISearchActivity extends Activity implements TextWatcher,
 								+ result.getPois().get(0).toString());
 						intent2.putExtra("info", etPOIInfo.getText().toString());
 						//System.out.println("----0 " +Config.getInstance().currentCity);
-						if (Config.getInstance().currentCity.equals(result.getPois().get(0).getCityName())) {// 判断是否同城物流
+					//ToastUtil.show(getApplicationContext(),result.getPois().get(0).getAdName()+result.getPois().get(0).getAdCode());
+						//if (Config.getInstance().currentCity.equals(result.getPois().get(0).getCityName())) {// 判断是否同城物流 判断同城或者物流  区分同城或者物流
 																	// 当前同城
+						if (!result.getPois().get(0).getAdName().endsWith("市")) {
 							Config.getInstance().ExpWay = Constants.EXP_WAY_BY_TONGCHENG;
 							Config.getInstance().ExpWayStr = Constants.EXP_WAY_STR_TONGCHENG;
 							System.out.println("tongcheng   "

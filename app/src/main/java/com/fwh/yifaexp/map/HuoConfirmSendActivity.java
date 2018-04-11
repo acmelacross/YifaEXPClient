@@ -104,10 +104,41 @@ public class HuoConfirmSendActivity extends Activity {
 		//tvHuoConfirmMileage 总里程
 		dis = MyMapUtil.circulateDistance(new LatLng(Config.getInstance().gpsAddStart.getLatitude(), Config.getInstance().gpsAddStart.getLongitude())
 		, new LatLng(Config.getInstance().gpsAddFinish.getLatitude(), Config.getInstance().gpsAddFinish.getLongitude()));
-		tvHuoConfirmMileage.setText(""+(int)(dis/1000)+"公里");
+		if((int)(dis/1000) == 0){
+			tvHuoConfirmMileage.setText("不到1"+"公里");
+		}else{
+			tvHuoConfirmMileage.setText(""+(int)(dis/1000)+"公里");
+		}
+
 			tvHuoConfirmQiBu.setText(Config.getInstance().startPrice+"");
 			chaogonglifei = (((int)(dis/1000)-5)*Config.getInstance().meiPrice);
-			tvHuoConfirmChaoLiCheng.setText(chaogonglifei+"");
+
+			//tvHuoConfirmChaoLiCheng.setText(chaogonglifei+"");
+		initJIsuanfei();
+	}
+	///**
+	//计算费用公式  2018-04-11
+	/// */
+	private double allPrice=0.0;
+	private void initJIsuanfei(){
+		//
+		//
+		//dis
+		if (dis/1000>=5){// 超出五公里后2元每方  5公里以上最低不能少于五元
+			allPrice+=(Config.getInstance().ExpHuoTiji*2*(dis/1000));
+			if(allPrice<=5){
+				allPrice = 5;
+			}
+		}else{//五公里以内最低2元,十元每方,
+				allPrice+=(Config.getInstance().ExpHuoTiji*10*((dis/1000)));
+			if (	allPrice<=2){
+				allPrice=2;
+			}
+		}
+		java.text.DecimalFormat   df   =new   java.text.DecimalFormat("#.0");
+		;
+		tvHuoConfirmChaoLiCheng.setText(df.format(allPrice)+"元");
+		//
 	}
 	private void initMap() {
 		if (aMap == null) {
@@ -202,7 +233,7 @@ public class HuoConfirmSendActivity extends Activity {
 	private void commitGoodsInfo(UserForYifa driver){
 	
 		UserForYifa user = BmobUser.getCurrentUser(this, UserForYifa.class);
-		
+		good.setPrice(allPrice);
 		good.setiExpWay(Config.getInstance().ExpWay);
 		good.setsExpWayStr(Config.getInstance().ExpWayStr);
 		good.setsExpUserTime();
@@ -222,6 +253,8 @@ public class HuoConfirmSendActivity extends Activity {
 			good.setsExpHuoInfoType(Config.getInstance().ExpHuoInfoType);
 			good.setsExpHuoType(Config.getInstance().ExpHuoType);
 		}
+		good.setdExpHuoTiji(Config.getInstance().ExpHuoTiji);
+
 		good.setUser(user);
 		MyJourneyActivity.goodTemp = good;
 		good.save(this, new SaveListener() {
@@ -251,26 +284,26 @@ public class HuoConfirmSendActivity extends Activity {
 //				// 因为网络等原因,支付结果未知(小概率事件),出于保险起见稍后手动查询
 //				@Override
 //				public void unknow() {
-//					
+//
 //				}
 //
 //				// 支付成功,如果金额较大请手动查询确认
 //				@Override
 //				public void succeed() {
-//				
+//
 //				}
 //
 //				// 无论成功与否,返回订单号
 //				@Override
 //				public void orderId(String orderId) {
 //					// 此处应该保存订单号,比如保存进数据库等,以便以后查询
-//				
+//
 //				}
 //
 //				// 支付失败,原因可能是用户中断支付操作,也可能是网络原因
 //				@Override
 //				public void fail(int code, String reason) {
-//					
+//
 //				}
 //			});
 		}

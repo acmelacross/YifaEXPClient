@@ -26,6 +26,7 @@ public class Config {
 	public  String ExpHuoType = "";//货物类型
 	public  String ExpCheType = "";//所需车型
 	public  double  ExpHuoWeight = 0.0;//货物重量
+	public  double  ExpHuoTiji = 0.0;//货物重量
 	public  String  ExpHuoInfoType = "默认";//重货 泡货 "重货"
 	public  String EXPOrderTime="";//预约时间
 	public  String XianShiDa="当日达";//限时达
@@ -35,7 +36,7 @@ public class Config {
 	public  String gpsAddFinishStr;//地理位置
 	public  String  ExpHuoZSInfo = "默认";//整车散货
 	public  String  EXPCompany = "默认";//物流公司
-	public  double  startPrice =10;//起步价
+	public  double  startPrice =5;//起步价
 	public  double  meiPrice =10;//每公里价格
 	public  int  ExpHuoZSTtpe;//整车散货
 	public BmobGeoPoint MyPoint;

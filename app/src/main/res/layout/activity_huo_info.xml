@@ -236,6 +236,37 @@
          android:layout_toRightOf="@id/tvHuoInfoHuoWuLiuGongSi"
          />
  </RelativeLayout>
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:layout_marginTop="10dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:text="货物体积"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/tvHuoInfoTiJi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:hint="请输入货物体积(单位:方)"
+            android:textColor="@color/black"
+            android:background="@null"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
  
  <RelativeLayout 
           android:id="@+id/rlHuoInfoaWuLiuChe"

@@ -22,11 +22,21 @@ public class GoodsForYifa extends BmobObject{
 	private  String sExpHuoType = "";//货物类型
 	private  String sExpCheType = "";//所需车型
 	private  double  dExpHuoWeight = 0.0;//货物重量
+
+	public double getdExpHuoTiji() {
+		return dExpHuoTiji;
+	}
+
+	public void setdExpHuoTiji(double dExpHuoTiji) {
+		this.dExpHuoTiji = dExpHuoTiji;
+	}
+
+	private  double  dExpHuoTiji = 1.0;//体积
 	private  String  sExpHuoInfoType = "";//重货 泡货
 	private  String  sExpOrderTime = "";//预约时间
 	private  String   sExpUserTime="";//客户发货时间
-	private  String   sExpDriverTime="";//司机接货时间
-	private  String   sExpArriverTime="";//签收时间
+//	private  String   sExpDriverTime="";//司机接货时间
+//	private  String   sExpArriverTime="";//签收时间
 	private BmobGeoPoint gpsAddStart;//地理位置
 	private BmobGeoPoint gpsAddFinish;//地理位置
 	private  String gpsAddStartStr;//地理位置
@@ -42,8 +52,8 @@ public class GoodsForYifa extends BmobObject{
 	private UserForYifa userDriver;
 	private  Integer iGoodState  ;//货物当前状态 0废弃 1接单中 2配送中 3已抵达  
 	private double price=0.0;//j价格
-	public static String  ExpHuoZSInfo = "";//整车散货
-	public static int  ExpHuoZSTtpe;//整车散货
+//	public static String  ExpHuoZSInfo = "";//整车散货
+//	public static int  ExpHuoZSTtpe;//整车散货
 	private  int  ExpHuoPay = Constants.EXP_GoodPayStateDefault;//0 为默认  未选择 1货到付款 2 在线支付
 	public int getExpHuoPay() {
 		return ExpHuoPay;
@@ -51,18 +61,18 @@ public class GoodsForYifa extends BmobObject{
 	public void setExpHuoPay(int expHuoPay) {
 		ExpHuoPay = expHuoPay;
 	}
-	public static String getExpHuoZSInfo() {
-		return ExpHuoZSInfo;
-	}
-	public static void setExpHuoZSInfo(String expHuoZSInfo) {
-		ExpHuoZSInfo = expHuoZSInfo;
-	}
-	public static int getExpHuoZSTtpe() {
-		return ExpHuoZSTtpe;
-	}
-	public static void setExpHuoZSTtpe(int expHuoZSTtpe) {
-		ExpHuoZSTtpe = expHuoZSTtpe;
-	}
+//	public static String getExpHuoZSInfo() {
+//		return ExpHuoZSInfo;
+//	}
+//	public static void setExpHuoZSInfo(String expHuoZSInfo) {
+//		ExpHuoZSInfo = expHuoZSInfo;
+//	}
+//	public static int getExpHuoZSTtpe() {
+//		return ExpHuoZSTtpe;
+//	}
+//	public static void setExpHuoZSTtpe(int expHuoZSTtpe) {
+//		ExpHuoZSTtpe = expHuoZSTtpe;
+//	}
 	private int priceStaet= Constants.EXP_GoodPayStateDefault;//订单状态 0未付款  1已付款
 	public int getPriceStaet() {
 		return priceStaet;
@@ -120,18 +130,18 @@ public class GoodsForYifa extends BmobObject{
 					"yyyy年MMMMdd日hh:mm aa");
 			this.sExpUserTime =  mFormatter.format(new Date());
 	}
-	public String getsExpDriverTime() {
-		return sExpDriverTime;
-	}
-	public void setsExpDriverTime(String sExpDriverTime) {
-		this.sExpDriverTime = sExpDriverTime;
-	}
-	public String getsExpArriverTime() {
-		return sExpArriverTime;
-	}
-	public void setsExpArriverTime(String sExpArriverTime) {
-		this.sExpArriverTime = sExpArriverTime;
-	}
+//	public String getsExpDriverTime() {
+//		return sExpDriverTime;
+//	}
+//	public void setsExpDriverTime(String sExpDriverTime) {
+//		this.sExpDriverTime = sExpDriverTime;
+//	}
+//	public String getsExpArriverTime() {
+//		return sExpArriverTime;
+//	}
+//	public void setsExpArriverTime(String sExpArriverTime) {
+//		this.sExpArriverTime = sExpArriverTime;
+//	}
 	
 	
 	public UserForYifa getUser() {
@@ -200,7 +210,7 @@ public class GoodsForYifa extends BmobObject{
 			str+=(","+sExpHuoInfoType);//重货 泡货
 		}
 		str+="限时达 "+xianShiDa;
-		str+="";
+		str+=",总体积 "+dExpHuoTiji+"方,总价格,"+price+"元";
 		return str;
 	}
 }

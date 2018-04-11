@@ -60,6 +60,7 @@ public class HuoInfoActivity extends FragmentActivity implements OnClickListener
 	TextView tvHuoInfoHuoInfoWuLiuGongSi;
 	//@ViewInject(R.id.tvHuoInfoWuLiuChe)//物流车
 	EditText tvHuoInfoWuLiuChe;
+	EditText tvHuoInfoTiJi;
 	
 	
 	
@@ -80,6 +81,8 @@ public class HuoInfoActivity extends FragmentActivity implements OnClickListener
 		rlHuoInfoWuLiuGongSi= (RelativeLayout)findViewById(R.id.rlHuoInfoWuLiuGongSi);
 		rlXianShiDa1= (RelativeLayout)findViewById(R.id.rlXianShiDa1);
 		tvHuoInfoWuLiuChe		= (EditText)findViewById(R.id.tvHuoInfoWuLiuChe);
+
+		tvHuoInfoTiJi = (EditText)findViewById(R.id.tvHuoInfoTiJi);
 
 	System.out.println(Config.getInstance().ExpWay+"Config.getInstance().ExpWay" + Constants.EXP_WAY_BY_TONGCHENG);
 		if (Config.getInstance().ExpWay ==Constants.EXP_WAY_BY_TONGCHENG ) {//同城 不 显示 物流车 和物流公司
@@ -491,13 +494,20 @@ public class HuoInfoActivity extends FragmentActivity implements OnClickListener
 	private void  confirmAll(){
 //		if(Config.getInstance().ExpWay !=Constact.EXP_WAY_BY_KUAIDI &&("".equals(Config.getInstance().ExpHuoType)||"".equals(Config.getInstance().ExpCheType)
 //				||Config.getInstance().ExpHuoWeight ==0.0))
-		if (tvHuoInfoLeixingXuanze.getText()==null||"".equals(tvHuoInfoLeixingXuanze.getText().toString())) {
+		if (tvHuoInfoLeixingXuanze.getText()==null||"".equals(tvHuoInfoLeixingXuanze.getText().toString()) ||"".equals(tvHuoInfoTiJi.getText().toString() ) ) {
 			ToastUtil.show(getApplicationContext(), "请将您的信息输入完整");//+(Config.getInstance().ExpWay !=Constact.EXP_WAY_BY_KUAIDI ) +"".equals(Config.getInstance().ExpHuoType)+
 		}
 		else{
 			//ToastUtil.show(getApplicationContext(), "OK");
 			//提交信息
 			//commitGoodsInfo();
+			try{
+				Config.getInstance().ExpHuoTiji = Double.parseDouble(tvHuoInfoTiJi.getText().toString());
+			}catch (Exception e){
+				ToastUtil.show(getApplicationContext(),"货物体积请输入整数或者小数");
+				return;
+			}
+
 			startActivity(new Intent().setClass(HuoInfoActivity.this, HuoConfirmSendActivity.class));
 			finish();
 			//getDrivres();

@@ -259,13 +259,14 @@ public class POISearchActivity extends Activity implements TextWatcher,
 					//ToastUtil.show(getApplicationContext(),result.getPois().get(0).getAdName()+result.getPois().get(0).getAdCode());
 						//if (Config.getInstance().currentCity.equals(result.getPois().get(0).getCityName())) {// 判断是否同城物流 判断同城或者物流  区分同城或者物流
 																	// 当前同城
-						if (!result.getPois().get(0).getAdName().endsWith("市")) {
+						if (!result.getPois().get(0).getAdName().endsWith("市")&&Config.getInstance().currentCity.equals(result.getPois().get(0).getCityName())) {
 							Config.getInstance().ExpWay = Constants.EXP_WAY_BY_TONGCHENG;
 							Config.getInstance().ExpWayStr = Constants.EXP_WAY_STR_TONGCHENG;
 							System.out.println("tongcheng   "
 									+ Config.getInstance().gpsAddStartStr
 									+ "---"
-									+ result.getPois().get(0).getCityName());
+
+												+ result.getPois().get(0).getCityName());
 						} else {
 							Config.getInstance().ExpWay = Constants.EXP_WAY_BY_WULIU;
 							Config.getInstance().ExpWayStr = Constants.EXP_WAY_STR_WULIU;
@@ -274,6 +275,8 @@ public class POISearchActivity extends Activity implements TextWatcher,
 									+ "---"
 									+ result.getPois().get(0).getCityName());
 						}
+
+
 
 						switch (tag) {
 						// 正常选择结束地点

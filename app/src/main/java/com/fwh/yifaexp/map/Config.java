@@ -37,7 +37,7 @@ public class Config {
 	public  String  ExpHuoZSInfo = "默认";//整车散货
 	public  String  EXPCompany = "默认";//物流公司
 	public  double  startPrice =5;//起步价
-	public  double  meiPrice =10;//每公里价格
+	public  double  meiPrice =15;//每公里价格
 	public  int  ExpHuoZSTtpe;//整车散货
 	public BmobGeoPoint MyPoint;
 	public boolean isJingZhun = false;//是否精准发车 

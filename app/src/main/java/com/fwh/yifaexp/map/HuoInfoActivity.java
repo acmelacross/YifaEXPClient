@@ -494,7 +494,8 @@ public class HuoInfoActivity extends FragmentActivity implements OnClickListener
 	private void  confirmAll(){
 //		if(Config.getInstance().ExpWay !=Constact.EXP_WAY_BY_KUAIDI &&("".equals(Config.getInstance().ExpHuoType)||"".equals(Config.getInstance().ExpCheType)
 //				||Config.getInstance().ExpHuoWeight ==0.0))
-		if (tvHuoInfoLeixingXuanze.getText()==null||"".equals(tvHuoInfoLeixingXuanze.getText().toString()) ||"".equals(tvHuoInfoTiJi.getText().toString() ) ) {
+		if ("".equals(tvHuoInfoTiJi.getText().toString() ) ) {//tvHuoInfoLeixingXuanze.getText()==null||"".equals(tvHuoInfoLeixingXuanze.getText().toString()) ||
+
 			ToastUtil.show(getApplicationContext(), "请将您的信息输入完整");//+(Config.getInstance().ExpWay !=Constact.EXP_WAY_BY_KUAIDI ) +"".equals(Config.getInstance().ExpHuoType)+
 		}
 		else{

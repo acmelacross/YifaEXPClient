@@ -90,7 +90,7 @@ public class IndexActivity extends CheckPermissionsActivity implements LocationS
 	private ImageView imgv_user_menu = null;
 	private View menu, content;
 	private ImageView imgVChangeVoiceText = null;
-	private TextView tvMapIndexcontent = null;
+	private TextView tvMapIndexcontent,tvMainUserName = null;
 	private TextView tvMapIndexConfirm = null;// 底部选择目的地确认按钮
 	private TextView tvMapIndexDistance = null;// 底部选择目的地距离金钱计算
 	boolean isVoice = false;// 当前状态是否为录音
@@ -143,6 +143,13 @@ public class IndexActivity extends CheckPermissionsActivity implements LocationS
 		findViewById(R.id.tvMapIndexMenuXiaoXi).setOnClickListener(this);
 		findViewById(R.id.tvMapIndexMenuWuLiuFee).setOnClickListener(this);
 		findViewById(R.id.tvMapIndexMenuZhouBian).setOnClickListener(this);
+		tvMainUserName =(TextView) findViewById(R.id.tvMainUserName);
+		if(BmobUser.getCurrentUser(IndexActivity.this)!=null){
+			tvMainUserName.setText(BmobUser.getCurrentUser(IndexActivity.this).getUsername());
+		}
+
+
+
 		findViewById(R.id.tvMapIndexMenufenxiangyoujiang).setOnClickListener(
 				this);
 		

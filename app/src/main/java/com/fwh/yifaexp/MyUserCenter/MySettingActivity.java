@@ -60,6 +60,7 @@ TextView tvMySettingExit;
 		});
 		//业务合作
 		RelativeLayout rlSettGuanYu = (RelativeLayout)findViewById(R.id.rlSettGuanYu);
+		//rlSettGuanYu.setVisibility(View.GONE);
 		rlSettGuanYu.setOnClickListener(new OnClickListener() {
 			public void onClick(View arg0) {
 //				new AlertDialog.Builder(MySettingActivity.this)
@@ -79,7 +80,7 @@ TextView tvMySettingExit;
 //				.setTitle("关于我们 ")
 //				.setMessage("易发快运  \n网站꣺www.baidu.com\n ")
 //						.show();
-				startActivity(new Intent().putExtra("isSoft",true).setClass(getApplicationContext(), AboutUsActivity.class));
+//				startActivity(new Intent().putExtra("isSoft",true).setClass(getApplicationContext(), AboutUsActivity.class));
 
 			}
 		});

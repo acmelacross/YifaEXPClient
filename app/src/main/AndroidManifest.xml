@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.fwh.yifaexp"
     android:versionCode="4"
-    android:versionName="4.2.180422"
+    android:versionName="5.2.180424"
     >
 
     <!-- 连接网络权限，用于执行云端语音能力 -->

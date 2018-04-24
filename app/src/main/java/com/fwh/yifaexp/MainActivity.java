@@ -177,17 +177,21 @@ public class MainActivity extends Activity implements OnClickListener,Callback {
         //延迟跳转到主页
         handler.sendEmptyMessageDelayed(0, 200);
 
+      //  BmobUpdateAgent.initAppVersion(MainActivity.this);
 
         BmobUpdateAgent.update(this);
         BmobUpdateAgent.setUpdateOnlyWifi(false);
-//        BmobUpdateAgent.setUpdateListener(new BmobUpdateListener() {
-//            @Override
-//            public void onUpdateReturned(int updateStatus, UpdateResponse updateInfo) {
-//                // TODO Auto-generated method stub
-//                //根据updateStatus来判断更新是否成功
-//                System.out.println("updateStatus   "+ updateStatus);
-//            }
-//        });
+        //BmobUpdateAgent.silentUpdate(this);
+        BmobUpdateAgent.setUpdateListener(new BmobUpdateListener() {
+            @Override
+            public void onUpdateReturned(int updateStatus, UpdateResponse updateInfo) {
+                // TODO Auto-generated method stub
+                //根据updateStatus来判断更新是否成功
+                System.out.println("updateStatus   "+ updateStatus);
+                System.out.println("updateStatus   "+ updateStatus);
+                System.out.println("updateStatus   "+ updateStatus);
+            }
+        });
     }
     //原来显示对话框，现在直接载入
     private void showAppkeyDialog() {

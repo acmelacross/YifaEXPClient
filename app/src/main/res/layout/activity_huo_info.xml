@@ -121,7 +121,7 @@
          android:layout_alignParentTop="true"
          android:layout_centerHorizontal="true"
          android:gravity="center"
-         android:hint="请输入货物类型(必填)"
+         android:hint="请输入货物类型(选填)"
          android:background="@null"
          android:textColor="@color/black"
          android:textSize="15sp" />
@@ -260,6 +260,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
+            android:gravity="center"
             android:hint="请输入货物体积(单位:方)"
             android:textColor="@color/black"
             android:background="@null"
@@ -316,18 +317,19 @@
          android:text="所需车型"
          android:layout_marginLeft="15dp"
          />
-     
-     <TextView 
-         android:id="@+id/tvHuoInfoCheXingXuanze"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:textColor="@color/black"
-		android:layout_centerInParent="true"
-         android:textSize="16sp"
-         android:layout_marginLeft="20dp"
-         android:hint="请选择需要的车型"
-         android:layout_toRightOf="@id/tvHuoInfoCheXing"
-         />
+
+        <TextView
+            android:id="@+id/tvHuoInfoCheXingXuanze"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/tvHuoInfoCheXing"
+            android:layout_marginLeft="22dp"
+            android:layout_marginStart="22dp"
+            android:layout_toEndOf="@+id/tvHuoInfoCheXing"
+            android:layout_toRightOf="@+id/tvHuoInfoCheXing"
+            android:hint="请选择需要的车型"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
  </RelativeLayout>
  <RelativeLayout 
         android:layout_width="match_parent"

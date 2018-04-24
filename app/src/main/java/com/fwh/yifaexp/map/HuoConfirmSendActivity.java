@@ -125,13 +125,24 @@ public class HuoConfirmSendActivity extends Activity {
 		//
 		//dis
 		if(Config.getInstance().ExpWay==Constants.EXP_WAY_BY_TONGCHENG){
+//			if (dis/1000>=5){// 超出五公里后2元每方  5公里以上最低不能少于五元
+//				allPrice+=(Config.getInstance().ExpHuoTiji*2*(dis/1000));
+//				if(allPrice<=5){
+//					allPrice = 5;
+//				}
+//			}else{//五公里以内最低2元,十元每方,
+//				allPrice+=(Config.getInstance().ExpHuoTiji*Config.getInstance().meiPrice);//*((dis/1000))
+//				if (	allPrice<=2){
+//					allPrice=2;
+//				}
+//			}
+
 			if (dis/1000>=5){// 超出五公里后2元每方  5公里以上最低不能少于五元
-				allPrice+=(Config.getInstance().ExpHuoTiji*2*(dis/1000));
-				if(allPrice<=5){
-					allPrice = 5;
-				}
+				allPrice+=(Config.getInstance().ExpHuoTiji*Config.getInstance().meiPrice);
+				allPrice+=(Config.getInstance().ExpHuoTiji*2*((dis/1000)-5));
+
 			}else{//五公里以内最低2元,十元每方,
-				allPrice+=(Config.getInstance().ExpHuoTiji*10);//*((dis/1000))
+				allPrice+=(Config.getInstance().ExpHuoTiji*Config.getInstance().meiPrice);//*((dis/1000))
 				if (	allPrice<=2){
 					allPrice=2;
 				}

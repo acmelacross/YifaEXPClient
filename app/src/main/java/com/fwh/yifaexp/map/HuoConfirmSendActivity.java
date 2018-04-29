@@ -141,7 +141,7 @@ public class HuoConfirmSendActivity extends Activity {
 				allPrice+=(Config.getInstance().ExpHuoTiji*Config.getInstance().meiPrice);
 				allPrice+=(Config.getInstance().ExpHuoTiji*2*((dis/1000)-5));
 
-			}else{//五公里以内最低2元,十元每方,
+			}else{//五公里以内最低2元,十五元每方,
 				allPrice+=(Config.getInstance().ExpHuoTiji*Config.getInstance().meiPrice);//*((dis/1000))
 				if (	allPrice<=2){
 					allPrice=2;

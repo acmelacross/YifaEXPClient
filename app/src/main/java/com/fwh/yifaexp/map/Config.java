@@ -33,6 +33,7 @@ public class Config {
 	public  BmobGeoPoint gpsAddStart;//地理位置
 	public  BmobGeoPoint gpsAddFinish;//地理位置
 	public  String gpsAddStartStr;//地理位置
+	public  String gpsAddStartCityStr="";//q起始地城市
 	public  String gpsAddFinishStr;//地理位置
 	public  String  ExpHuoZSInfo = "默认";//整车散货
 	public  String  EXPCompany = "默认";//物流公司

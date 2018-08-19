@@ -259,7 +259,9 @@ public class POISearchActivity extends Activity implements TextWatcher,
 					//ToastUtil.show(getApplicationContext(),result.getPois().get(0).getAdName()+result.getPois().get(0).getAdCode());
 						//if (Config.getInstance().currentCity.equals(result.getPois().get(0).getCityName())) {// 判断是否同城物流 判断同城或者物流  区分同城或者物流
 																	// 当前同城
-						if (!result.getPois().get(0).getAdName().endsWith("市")&&Config.getInstance().currentCity.equals(result.getPois().get(0).getCityName())) {
+						if (!result.getPois().get(0).getAdName().endsWith("市")&&(Config.getInstance().currentCity.equals(result.getPois().get(0).getCityName()) ||
+
+								result.getPois().get(0).getCityName().equals(	Config.getInstance().gpsAddStartCityStr))) {
 							Config.getInstance().ExpWay = Constants.EXP_WAY_BY_TONGCHENG;
 							Config.getInstance().ExpWayStr = Constants.EXP_WAY_STR_TONGCHENG;
 							System.out.println("tongcheng   "
@@ -314,6 +316,9 @@ public class POISearchActivity extends Activity implements TextWatcher,
 								.get(0).getCityName()
 								+ result.getPois().get(0).getAdName()
 								+ result.getPois().get(0).toString();
+
+						Config.getInstance().gpsAddStartCityStr= result.getPois()
+								.get(0).getCityName();
 						Intent intent2 = new Intent();
 						intent2.putExtra("weidu", result.getPois().get(0)
 								.getLatLonPoint().getLatitude());
